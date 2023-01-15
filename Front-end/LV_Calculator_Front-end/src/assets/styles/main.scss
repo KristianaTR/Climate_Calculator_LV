@@ -1,0 +1,17 @@
+@import 'base.scss';
+@import 'header.scss';
+@import'body.scss';
+@import 'footer.scss';
+
+
+body {
+    background: $background-grey-light;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.main-wrapper {
+min-height: 100%;
+position: relative;
+}
