@@ -6,18 +6,12 @@ $background-grey-light: #F3F3F3;
 $background-white: #FFFFFF;
 $background-grey-dark: #8E8F90;
 $text-grey: #646569;
-$text-grey-dark:#49494D;
 $text-white: #FFFFFF;
 $text-black: #000000;
 $line-green: #A3D541;
 $line-grey-light: #D2D2D2;
 $line-grey-dark:#8E8F90;
 $tab-background:#FFFFFF;
-
-@mixin full_size {
-    min-height:100vh;
-    min-width:100vw;
-}
 
 //viewport width
 $viewport-width-desktop: 1280px;

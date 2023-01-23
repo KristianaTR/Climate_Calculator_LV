@@ -1,64 +1,30 @@
 //header starts-->
 .header-wrapper {
     background: $background-white;
+    border-bottom: solid 3px $line-green;
     position: sticky;
     top:0;
     z-index: 99;
     .header-block {
+        position: relative;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        align-items: center;
         max-width: $viewport-width-desktop;
-        padding: 0 35px;
         margin: auto;
-        .logo-block {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding: 25px 0;
-            .header-title {
-                width: 135px;
-                text-align: left;
-                font-family: Rubik,sans-serif;
-                font-style: normal;
-                font-size: 18px;
-                font-weight: 500;
-                line-height: 21px;
-                letter-spacing: -0.02em;
-                text-transform:uppercase;
-                color: $text-grey;
-                margin-left: 15px;
-            }
-        }
-        .page-links {
-            display: flex;
-            align-items: flex-end;
-            .page-link-item {
-                height: 50px;
-                width: 180px;
-                //padding: 10px 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-family: 'Rubik';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 17px;
-                letter-spacing: -0.04em;
-                color: $text-grey;
-                text-decoration: none;
-                &:hover, &:active {
-                    background-color: $background-grey-light;
-                    border-radius: 4px 4px 0 0;
-                }
-                &:active {
-                    font-size: 16px;
-                    line-height: 19px;
-                    letter-spacing: -0.02em;
-                    color: $text-grey-dark;
-                }
-            }
+        padding: 20px 80px 20px 80px;
+        .title-block {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-family: Rubik,sans-serif;
+            font-style: normal;
+            font-size: 35px;
+            font-weight: 500;
+            line-height: 41px;
+            letter-spacing: -0.02em;
+            text-transform:uppercase;
+            color: $text-grey;
         }
     }
 }

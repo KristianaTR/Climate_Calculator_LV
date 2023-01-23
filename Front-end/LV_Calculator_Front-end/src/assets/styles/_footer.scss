@@ -1,13 +1,14 @@
 //footer starts-->
 .footer-wrapper {
     background: $background-grey-dark;
-    flex-shrink: 0;
+    //box-sizing: border-box;
+    // position: absolute;
+    // bottom: 0;
+    max-width: $viewport-width-desktop;
+    padding: 20px 80px 20px 80px;
     .footer-blocks {
         display: flex;
         flex-direction: column;
-        max-width: $viewport-width-desktop;
-        padding: 10px 35px 20px 35px;
-        margin: auto;
         .upper-footer {
             display: flex;
             flex-direction: row;
@@ -24,12 +25,11 @@
                     font-family: Rubik,sans-serif;
                     font-style: normal;
                     font-weight: 400;
-                    font-size: 14px;
-                    line-height: 17px;
-                    letter-spacing: -0.02em;
+                    font-size: 16px;
+                    line-height: 22px;
                     color: $text-white;
                     margin-left: 30px;
-                    align-self: center;
+                    align-self: flex-end;
                 }
             }
             .right {

@@ -1,17 +1,20 @@
 <template>
-    <div class="sector-logo"> 
-        <img :src="sectorLogo" alt="sector logo">
+    <div class="sector-logo">
+        {{ imgData }}
     </div>
 </template>
 
 <script>
     export default {
-        name: "SectorLogo",
-        props: {
-            sectorLogo: {
-                type: String,
-                default: null
-            }
+        inject: ['imgData'],
+        data: () => ({
+            sectorLogo: null,
+        }),
+        created () {
+            this.sectorLogo = this.imgData;
         }
+
     }
+    
+    
 </script>
