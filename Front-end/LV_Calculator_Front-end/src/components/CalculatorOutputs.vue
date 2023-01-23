@@ -23,7 +23,6 @@ export default {
 
 <template>
     <div class="calculator-outputs">
-        <div class="outputs-navigation"></div>
         <div class="output-tabs-container">
             <nav>
                 <a href="#overview">Kopsavilkums</a>

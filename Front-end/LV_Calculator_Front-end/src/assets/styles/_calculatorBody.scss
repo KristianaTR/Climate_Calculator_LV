@@ -1,0 +1,239 @@
+//main body starts-->
+.calculator-wrapper {
+    background: $background-grey-light;
+    .calculator-blocks {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        max-width: $viewport-width-desktop;
+        padding: 15px 35px 15px 35px;
+        margin: auto;
+        .calculator-inputs {
+            max-width: $input-container-max-width;
+            width: 100%;
+            margin-right: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .inputs-navigation {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                height:60px;
+                background: $background-white;
+                border-radius: 4px;
+                margin-bottom: 8px;
+            }
+            .levers-container {
+                display: flex;
+                flex-direction: column;
+                justify-content:flex-start;
+                align-items: center;
+                background: $background-white;
+                border-radius: 4px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                .levers-header {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    p {
+                        font-family: 'Rubik';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 24px;
+                        color: $text-grey;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+                .levers-table {
+                    display: flex;
+                    margin-bottom: 14px;
+                    .levers {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: center;
+                        .levers-sector-container {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            align-items: center;
+                            .levers-sector {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                padding:3px 8px 0 8px;
+                                .card {
+                                    height: 70px;
+                                    width: 202px;
+                                    border: solid 1px $line-grey-light;
+                                    border-radius: 4px;
+                                    box-sizing: border-box;
+                                    margin-right: 8px;
+                                    padding: 0 8px;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    box-shadow: rgba(0, 0, 0, 0.19) 0px 5px 5px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+                                    transition: all300ms ease;
+                                    &:hover {
+                                        cursor: pointer;
+                                        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+                                        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;  
+                                    }
+                                    .sector-name {
+                                        font-family: 'Rubik';
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 14px;
+                                        line-height: 17px;
+                                        color: $text-black;
+                                        text-transform: uppercase;
+                                    }
+                                }
+                                .lever-steps-container {
+                                    display: grid;
+                                    grid-template-columns: auto auto auto auto;
+                                    grid-gap: 4px;
+                                    .lever-step {
+                                        height: 40px;
+                                        width: 40px;
+                                        background: $background-grey-light;
+                                        box-shadow: rgba(0, 0, 0, 0.19) 0px 5px 5px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+                                        transition: all300ms ease;
+                                        &:hover {
+                                            cursor: pointer;
+                                            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+                                        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; 
+                                            // background-color: $background-grey-dark;
+                                            // transition: all 0.5s;
+                                        }
+                                    }
+                                }
+                            }
+                            .levers-subsector-container {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                align-items: center;
+                            }
+                            .subsectors-hidden {
+                                display: none;
+                            }
+
+                        }
+                        }
+                }
+            }
+            }
+        .calculator-outputs {
+            max-width: $output-container-max-width;
+            width: 100%;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            //overflow: hidden; --> keep for scrolling option
+            position: relative;
+            justify-content: flex-start;
+            align-items:center;
+            .output-tabs-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 100%;
+                flex-shrink: 0;
+                min-block-size: fit-content;
+                margin-bottom: 8px;
+                nav {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    a {
+                        font-family: 'Rubik';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 15px;
+                        text-align: center;
+                        letter-spacing: -0.04em;
+                        color: $text-grey;
+                        text-decoration: none;
+                        background: $tab-background;
+                        padding: 0 4px;
+                        margin:0 4px;
+                        border-radius: 4px 4px 0 0;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        white-space: nowrap;
+                        height: 60px;
+                        width:inherit;
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                        transition: all300ms ease;
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        &:hover {
+                            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+                        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; 
+                        }
+                    
+                    }
+                }
+            }
+            .output-charts-container {
+                height: 100%;
+                width: 100%;
+                background: $background-white;
+                border-radius: 0 0 4px 4px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                // display: grid;
+                // grid-auto-flow: column;
+                // grid-auto-columns: 100%;
+                .chart-container {
+                    display: inline-block;
+                    position: relative;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.partners-wrapper {
+    padding: 0 35px 20px 35px;
+    .partners-block {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        align-items: center;
+        max-width: $viewport-width-desktop;
+        border-top: solid 1px $line-grey-dark;
+        padding-top: 20px;
+        margin: auto;
+        p {
+            font-family: Rubik,sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: -0.02em;
+            color: $text-grey-dark;
+        }
+        a > img {
+            height: 55px;
+        }
+    }
+}
