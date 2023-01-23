@@ -1,17 +1,20 @@
 @import 'base.scss';
 @import 'header.scss';
-@import'body.scss';
+@import'calculatorBody.scss';
+@import 'howToUseBody.scss';
 @import 'footer.scss';
 
 
 body {
     background: $background-grey-light;
     margin: 0;
-    padding: 0;
-    height: 100%;
+    @include full_size;
 }
 
 .main-wrapper {
-min-height: 100%;
-position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
 }
