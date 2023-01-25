@@ -2,6 +2,7 @@
 @import 'header.scss';
 @import'calculatorBody.scss';
 @import 'howToUseBody.scss';
+@import 'aboutBody.scss';
 @import 'footer.scss';
 
 
@@ -9,6 +10,7 @@ body {
     background: $background-grey-light;
     margin: 0;
     @include full_size;
+    overflow-x: hidden;
 }
 
 .main-wrapper {

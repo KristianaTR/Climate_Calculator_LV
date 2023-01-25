@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: "/",
       name: "kalkulators",
-      component: HomeView
+      component: HomeView,
     },
     {
       path: "/ka-lietot",

@@ -4,7 +4,6 @@
     .calculator-blocks {
         display: flex;
         flex-direction: row;
-        justify-content: center;
         max-width: $viewport-width-desktop;
         padding: 15px 35px 15px 35px;
         margin: auto;
@@ -128,19 +127,17 @@
                             .subsectors-hidden {
                                 display: none;
                             }
-
                         }
-                        }
+                    }
                 }
             }
-            }
+        }
         .calculator-outputs {
-            max-width: $output-container-max-width;
             width: 100%;
             border-radius: 4px;
             display: flex;
             flex-direction: column;
-            //overflow: hidden; --> keep for scrolling option
+            //overflow: hidden; --> scrolling
             position: relative;
             justify-content: flex-start;
             align-items:center;
@@ -150,8 +147,8 @@
                 justify-content: space-evenly;
                 align-items: center;
                 width: 100%;
-                flex-shrink: 0;
-                min-block-size: fit-content;
+                // flex-shrink: 0; --> scrolling
+                // min-block-size: fit-content; --> scrolling
                 margin-bottom: 8px;
                 nav {
                     display: flex;

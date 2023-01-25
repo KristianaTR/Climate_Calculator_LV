@@ -32,6 +32,7 @@ export default {
                 <a href="#bioenergy">Bioenerģijas apgāde</a>
                 <a href="#electricity">Enerģijas ražošana</a>
             </nav>
+            <span class="snap-indicator"></span>
         </div>
         <div class="subtab-menu"></div>
         <div class="output-charts-container">
@@ -41,22 +42,22 @@ export default {
                     :options="chartOptions"
                     :data="chartData"
                 />
-
+        
             </div>
             <!-- <div id="transport" class="chart-container">
-                <canvas id="myChart" style="width:100%; max-width:834px; height: 80%;"></canvas>
+                
             </div>
             <div id="buildings" class="chart-container">
-                <canvas id="myChart" style="width:100%; max-width:834px; height: 80%;"></canvas>
+                
             </div>
             <div id="industry" class="chart-container">
-                <canvas id="myChart" style="width:100%; max-width:834px; height: 80%;"></canvas>
+                
             </div>
             <div id="bioenergy" class="chart-container">
-                <canvas id="myChart" style="width:100%; max-width:834px; height: 80%;"></canvas>
+                
             </div>
             <div id="electricity" class="chart-container">
-                <canvas id="myChart" style="width:100%; max-width:834px; height: 80%;"></canvas>
+                
             </div> -->
         </div>
     </div>
