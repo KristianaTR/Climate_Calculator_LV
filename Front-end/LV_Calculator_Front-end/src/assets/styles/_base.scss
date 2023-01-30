@@ -8,6 +8,7 @@ $background-grey-light-gradient-full: rgb(243, 243, 243, 1);
 $background-grey-light-gradient-transp: rgb(243, 243, 243, 0.5);
 $background-white: #FFFFFF;
 $background-grey-dark: #8E8F90;
+$tab-background:#FFFFFF;
 $text-grey: #646569;
 $text-grey-dark:#49494D;
 $text-white: #FFFFFF;
@@ -15,7 +16,11 @@ $text-black: #000000;
 $line-green: #A3D541;
 $line-grey-light: #D2D2D2;
 $line-grey-dark:#8E8F90;
-$tab-background:#FFFFFF;
+$icon-border-blue: #C7DDFD;
+$button-reset-background-default: #DEA613;
+$button-reset-background-active: #FFC627;
+$button-submenu-backgroung-hover: #EBF3FF;
+$button-submenu-backgroung-active: #FFF3D3;
 
 @mixin full_size {
     min-height:100vh;
@@ -34,3 +39,6 @@ $output-container-max-width: 804px;
 //container height
 $header-height: 124px;
 $footer-height: 165.969px;
+
+//wrapper margin
+$wrapper-margin-x: calc(35px * 2);

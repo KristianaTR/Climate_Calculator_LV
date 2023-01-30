@@ -1,16 +1,33 @@
 <script setup>
     import InputsLeversSector from "./InputsLeversSector.vue";
+    import Dropdown from "./Dropdown.vue";
 </script>
 
 <template>
     <div class="calculator-inputs">
         <div class="inputs-navigation">
-            
+            <span class="info-button info-button__scenarious">
+                <span></span>
+            </span>
+            <Dropdown title="Scenāriju piemēri" :items="scenarious"></Dropdown>
+            <div class="button-reset-conteiner">
+                <button class="button-reset">Atiestatīt</button>
+            </div>
         </div>
         <div class="levers-container">
             <div class="levers-header">
-                <p>Sekcijas</p>
-                <p>Ambīciju līmenis</p>
+                <div class="levers-column__sectors">
+                    <span class="info-button info-button__sectors">
+                        <span></span>
+                    </span>
+                    <p>Sadaļas</p>
+                </div>
+                <div class="levers-column__steps">
+                    <span class="info-button info-button__steps">
+                        <span></span>
+                    </span>
+                    <p>Ambīciju līmenis:</p>
+                </div>
             </div>
             <div class="levers-table">
                 <div class="levers">
@@ -30,8 +47,26 @@
     
     export default {
         name: "CalculatorInputs",
+        components: {
+            Dropdown,
+            InputsLeversSector
+        },
         data () {
             return {
+                scenarious: [
+                    {
+                        title: 'Visi ambīciju līmeņi 2',
+                        link: '#'
+                    },
+                    {
+                        title: 'Visi ambīciju līmeņi 3',
+                        link: '#'
+                    },
+                    {
+                        title: 'Sasniegts 0% CO2 līmenis',
+                        link: '#'
+                    }
+                ],
                 leversSectors: [
                     {
                         img: IconTransport,

@@ -386,7 +386,24 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .how-to-use-wrapper .how-to-use-block .how-to-use-tab-container {
+  position: relative;
   padding: 30px 0 0 30px;
+}
+.how-to-use-wrapper .how-to-use-block .how-to-use-tab-container .modal-close-icon {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 35px;
+  height: 36px;
+  border: solid 1px #C7DDFD;
+  border-radius: 4px;
+}
+.how-to-use-wrapper .how-to-use-block .how-to-use-tab-container .modal-close-icon:hover {
+  cursor: pointer;
+}
+.how-to-use-wrapper .how-to-use-block .how-to-use-tab-container .modal-close-icon span {
+  content: url(../../components/icons/IconModalClose.svg);
 }
 .how-to-use-wrapper .how-to-use-block .how-to-use-tab-container a {
   font-family: "Rubik";
@@ -410,16 +427,54 @@
   width: 125px;
 }
 .how-to-use-wrapper .how-to-use-block .how-to-use-content-container {
+  display: flex;
+  flex-direction: row;
   flex: 1;
+  justify-content: center;
   border-top: solid 1px #F1F1F1;
   margin: 0 30px 30px 30px;
-  padding-top: 15px;
 }
 .how-to-use-wrapper .how-to-use-block .how-to-use-content-container .how-to-use-img-container {
-  height: 500px;
-  width: 400px;
+  height: 100%;
+  min-height: 400px;
+  margin-top: 30px;
+  width: 40%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
+}
+.how-to-use-wrapper .how-to-use-block .how-to-use-content-container .how-to-use-text-container {
+  display: block;
+  height: 100%;
+  min-height: 400px;
+  margin: 30px 0 0 20px;
+  width: 60%;
+}
+.how-to-use-wrapper .how-to-use-block .how-to-use-content-container .how-to-use-text-container h2, .how-to-use-wrapper .how-to-use-block .how-to-use-content-container .how-to-use-text-container p {
+  font-family: "Rubik";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #646569;
+}
+.how-to-use-wrapper .how-to-use-block .how-to-use-content-container .how-to-use-text-container h2 {
+  font-weight: 600;
+}
+.how-to-use-wrapper .how-to-use-block .how-to-use-content-container .how-to-use-text-container p {
+  font-weight: 400;
+  text-align: justify;
+}
+@media screen and (max-width: 834px) {
+  .how-to-use-wrapper .how-to-use-block {
+    z-index: 100;
+  }
+  .how-to-use-wrapper .how-to-use-block .how-to-use-tab-container .modal-close-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.how-to-use-wrapper .how-to-use-block.block-hidden {
+  display: none;
 }
 
 .about-wrapper {

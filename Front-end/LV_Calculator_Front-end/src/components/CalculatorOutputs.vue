@@ -23,18 +23,16 @@ export default {
 
 <template>
     <div class="calculator-outputs">
-        <div class="output-tabs-container">
-            <nav>
-                <a href="#overview">Kopsavilkums</a>
-                <a href="#transport">Transports</a>
-                <a href="#buildings">Mājsaimniecība/ēkas</a>
-                <a href="#industry">Komercdarbība</a>
-                <a href="#bioenergy">Bioenerģijas apgāde</a>
-                <a href="#electricity">Enerģijas ražošana</a>
-            </nav>
-            <span class="snap-indicator"></span>
+        <div class="subtab-menu">
+          <div class="subtab-menu-charts">
+            <span>CO2 emisijas</span>
+            <span>Enerģijas ieguve</span>
+            <span>Enerģijas patēriņš</span>
+          </div>
+          <div class="subtab-menu-share">
+            <span>Dalīties</span>
+          </div>
         </div>
-        <div class="subtab-menu"></div>
         <div class="output-charts-container">
             <div id="overview" class="chart-container">
                 <Bar

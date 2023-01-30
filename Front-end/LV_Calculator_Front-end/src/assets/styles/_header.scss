@@ -36,16 +36,16 @@
             align-items: flex-end;
             .burger-menu-icon {
                 display: none;
-            }
-            .nav-hamburger {
-                content: url(../../components/icons/Hamburger.svg);
-                height: 16px;
-                width: 25px;
-                &:hover {
-                    cursor: pointer;
+                .nav-hamburger {
+                    content: url(../../components/icons/Hamburger.svg);
+                    height: 16px;
+                    width: 25px;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
-            nav {
+            nav.navigation-desktop {
                 display: flex;
                 align-items: flex-end;
                 .page-link-item {
@@ -83,9 +83,22 @@
                     }
                 }
             }
+            nav.navigation-modal-windows {
+                display: none;
+                a {
+                    text-decoration: none;
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 17px;
+                    letter-spacing: -0.04em;
+                    color: $text-grey;
+                }
+            }
             @media screen and (max-width:$viewport-width-tablet) {
                 align-items: center;
-                nav {
+                nav.navigation-desktop {
                     display: none;
                 }
                 .burger-menu-icon {
@@ -113,7 +126,7 @@
                         }
                     }
 
-                    nav {
+                    nav.navigation-modal-windows {
                         display: flex;
                         flex-direction: column;
                         position: absolute;
@@ -124,14 +137,12 @@
                         width: 200px;
                         height: calc(100vh - $header-height);
                         filter: drop-shadow(-1px 10px 4px rgba(0, 0, 0, 0.25));
-                        .page-link-item {
-                            justify-content: flex-end;
+                        a {
+                            text-align: right;
+                            
                             padding-right: 35px;
                             padding-top: 20px;
                             margin-right: 0;
-                            &:first-child {
-                                display: none;
-                            }
                             &:hover, &:active {
                                 box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
                                  rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; 

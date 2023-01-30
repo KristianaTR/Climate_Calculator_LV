@@ -1,16 +1,19 @@
-.how-to-use-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    .how-to-use-block--margin {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        margin-top: 15px;
-        .how-to-use-block {
+.modal-how-to-use-mask {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: table;
+    transition: opacity 0.3s ease;
+    .modal-how-to-use-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        .modal-how-to-use-block {
             display: flex;
             flex-direction: column;
-            flex: 1;
             max-width: calc($viewport-width-desktop - $wrapper-margin-x);
             margin: 0 35px;
             background: $background-white;
@@ -20,7 +23,6 @@
                 position: relative;
                 padding: 30px 0 0 30px;
                 .modal-close-icon {
-                    display: none;
                     position: absolute;
                     top: 20px;
                     right: 20px;
@@ -28,33 +30,41 @@
                     height: 36px;
                     border: solid 1px $icon-border-blue;
                     border-radius: 4px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
                     &:hover {
                         cursor: pointer;
                     }
                     span {
                         content: url(../../components/icons/IconModalClose.svg);
+                        height: 19px;
+                        width: 11px;
                     }
                 }
-                a {
-                    font-family: 'Rubik';
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 14px;
-                    line-height: 17px;
-                    text-align: center;
-                    letter-spacing: -0.04em;
-                    color: $text-grey-dark;
-                    text-decoration: none;
-                    background: $background-grey-light;
-                    padding: 0 4px;
-                    margin:0 4px;
-                    border-radius: 4px 4px 0 0;
-                    display: inline-flex;
-                    justify-content: center;
-                    align-items: center;
-                    white-space: nowrap;
-                    height: 45px;
-                    width: 125px;
+                nav {
+                    padding-right: 55px;
+                    a {
+                        font-family: 'Rubik';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 17px;
+                        text-align: center;
+                        letter-spacing: -0.04em;
+                        color: $text-grey-dark;
+                        text-decoration: none;
+                        background: $background-grey-light;
+                        padding: 0 4px;
+                        margin:0 4px;
+                        border-radius: 4px 4px 0 0;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        white-space: nowrap;
+                        height: 45px;
+                        width: 125px;
+                    }
                 }
             }
             .how-to-use-content-container {
@@ -75,7 +85,6 @@
                 .how-to-use-text-container {
                     display: block;
                     height: 100%;
-                    min-height: 400px; //keep for visualisation, object to change
                     margin:30px 0 0 20px;
                     width: 60%;
                     h2, p {
@@ -93,19 +102,6 @@
                         text-align: justify;
                     }
                 }
-            }
-            // @media screen and (max-width:$viewport-width-tablet) {
-            //     .how-to-use-tab-container {
-            //         .modal-close-icon {
-            //             display: flex;
-            //             align-items: center;
-            //             justify-content: center;
-            //         }
-    
-            //     }
-            // }
-            &.block-hidden {
-                display: none;
             }
         }
     }
