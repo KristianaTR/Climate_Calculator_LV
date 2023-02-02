@@ -1,0 +1,13 @@
+.button-close-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .modal-close-icon {
+        content: url(../../components/icons/Close.svg);
+        height: 19px;
+        width: 19px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,17 @@
+.button-info-container {
+    .info-button {
+        padding: 0 10px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+        }
+        span{
+            content: url(../../components/icons/IconInfo.svg);
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+}

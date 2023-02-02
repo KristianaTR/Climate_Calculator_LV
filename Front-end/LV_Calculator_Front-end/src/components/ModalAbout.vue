@@ -2,7 +2,7 @@
     <div class="modal-about-mask">
         <div class="modal-about-wrapper">
             <div class="modal-about-block">
-                <button class="modal-close-icon" @click="$emit('closeAbout')" >
+                <button class="modal-close-icon" @click="$emit('closeModal')" >
                     <span></span>
                 </button>
                 <div class="modal-about-block__text-content">

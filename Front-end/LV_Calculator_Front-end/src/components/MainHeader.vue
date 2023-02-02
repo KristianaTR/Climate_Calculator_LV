@@ -5,8 +5,8 @@ import ModalAbout from './ModalAbout.vue';
 
 <template>
     <div class="header-wrapper">
-        <ModalHowToUse v-show="showModalHowToUse" @closeHowToUse="showModalHowToUse = false"></ModalHowToUse>
-        <ModalAbout v-show="showModalAbout" @closeAbout="showModalAbout = false"></ModalAbout>
+        <ModalHowToUse v-show="showModalHowToUse" @closeModal="showModalHowToUse = false"></ModalHowToUse>
+        <ModalAbout v-show="showModalAbout" @closeModal="showModalAbout = false"></ModalAbout>
         <div class="header-block">
             <div class="logo-block">
                 <div class="header-logo">

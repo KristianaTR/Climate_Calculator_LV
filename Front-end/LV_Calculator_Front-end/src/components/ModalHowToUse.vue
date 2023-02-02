@@ -3,7 +3,7 @@
         <div class="modal-how-to-use-wrapper">
             <div class="modal-how-to-use-block">
                 <div class="how-to-use-tab-container">
-                    <button class="modal-close-icon" @click="$emit('closeHowToUse')" >
+                    <button class="modal-close-icon" @click="$emit('closeModal')" >
                         <span></span>
                     </button>
                     <nav>
