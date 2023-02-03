@@ -1,31 +1,25 @@
 <script setup>
     import InputsLeversSector from "./InputsLeversSector.vue";
     import Dropdown from "./Dropdown.vue";
+    import ButtonInfo from "./ButtonInfo.vue";
+    import ButtonReset from "./ButtonReset.vue";
 </script>
 
 <template>
     <div class="calculator-inputs">
         <div class="inputs-navigation">
-            <span class="info-button info-button__scenarious">
-                <span></span>
-            </span>
+            <ButtonInfo></ButtonInfo>
             <Dropdown title="Scenāriju piemēri" :items="scenarious"></Dropdown>
-            <div class="button-reset-conteiner">
-                <button class="button-reset">Atiestatīt</button>
-            </div>
+            <ButtonReset></ButtonReset>
         </div>
         <div class="levers-container">
             <div class="levers-header">
                 <div class="levers-column__sectors">
-                    <span class="info-button info-button__sectors">
-                        <span></span>
-                    </span>
+                    <ButtonInfo></ButtonInfo>
                     <p>Sadaļas</p>
                 </div>
                 <div class="levers-column__steps">
-                    <span class="info-button info-button__steps">
-                        <span></span>
-                    </span>
+                    <ButtonInfo></ButtonInfo>
                     <p>Ambīciju līmenis:</p>
                 </div>
             </div>
@@ -49,7 +43,9 @@
         name: "CalculatorInputs",
         components: {
             Dropdown,
-            InputsLeversSector
+            InputsLeversSector,
+            ButtonInfo,
+            ButtonReset
         },
         data () {
             return {
@@ -70,27 +66,74 @@
                 leversSectors: [
                     {
                         img: IconTransport,
-                        name: 'Transports'
+                        name: 'Transports',
+                        subsectors: [
+                            'Pasažieru transports', 
+                            'Pārslēgšanās uz 0 emisiju transportu', 
+                            'Nulles emisiju transporta veida izvēle',
+                            'Kravu pārvadājumi',
+                            'Starptautiskā aviācija',
+                            'Starptautiskā navigācija'
+                        ]
                     },
                     {
                         img: IconBuildings,
-                        name: 'Mājsaimniecība'
+                        name: 'Mājsaimniecība',
+                        subsectors: [
+                            'Vidējā temperatūra mājokļos',
+                            'Māju renovācija',
+                            'Māju apkures elektrifikācija',
+                            'Pārējās māju apkures sistēmas',
+                            'Apgaismojums un sadzīves tehnika',
+                            'Ēdienu gatavošamas tehnikas elektrifikācija'
+                        ]
                     },
                     {
                         img: IconIndustry,
-                        name: 'Komercdarbība'
+                        name: 'Komercdarbība',
+                        subsectors: [
+                            'Ražošanas izaugsme rūpniecībā',
+                            'Energointensitāte rūpniecībā',
+                            'Apkure un dzesēšanas patēriņš komercsektorā',
+                            'Apkures elektrifikācija komercsektorā',
+                            'Pārējās apkures sistēmas komercsektorā',
+                            'Apgaismojums un ierīces komercsektorā',
+                            'Komerciālā sektora ēdienu gatavošanas iekārtu elektrifikācija'
+                        ]
                     },
                     {
                         img: IconBioenergy,
-                        name: 'Bioenerģijas apgāde'
+                        name: 'Bioenerģijas apgāde',
+                        subsectors: [
+                            'Biomasas kurināmā veidi',
+                            'Bioenerģijas imports',
+                            'Bioenerģijai atvēlētās zemes platības',
+                            'Lopkopība',
+                            'Atkritumi un to reģenerācija',
+                            'Jūras aļģes'
+                        ]
                     },
                     {
                         img: IconElectricity,
-                        name: 'Enerģijas ražošana'
+                        name: 'Enerģijas ražošana',
+                        subsectors: [
+                            'Biomasa, elektroenerģijas ražošanas stacijas',
+                            'Elektrostacijas ar CCS',
+                            'Kurināmā izvēle CCS stacijās',
+                            'Sauszemes vēja stacijas',
+                            'Atkrastes vēja stacijas',
+                            'Saules PV elektroenerģijas ražošanai',
+                            'Saules paneļi siltumenerģijas ražošanai',
+                            'Mazas jaudas vēja stacijas',
+                            'Elektroenerģijas imports'
+                        ]
                     }
                 ]
             }
         }
+        // computed: {
+        //     Subsectors: this.leversSectors.subsectors,
+        // }
     }
 </script>
 

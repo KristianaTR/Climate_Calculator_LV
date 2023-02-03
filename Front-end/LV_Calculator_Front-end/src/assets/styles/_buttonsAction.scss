@@ -1,35 +1,32 @@
-.action-buttons-container {
-    .button-container {
-        .button {
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 19px;
-            text-align: center;
-            letter-spacing: -0.02em;
-            color: $text-white;
-            padding: 8px 12px;
-            border-radius: 4px;
-            border: none;
-            &__reset {
-                background: $button-reset-background-default;
-                &:active {
-                    background: $button-reset-background-active;
-                }
-            }
-            &__results {
-                background: $button-results-background-default;
-                &:active {
-                    background: $button-results-background-active;
-                }
-            }
-            &:hover {
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-                cursor: pointer;
+.button-container {
+    .button {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: $text-white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        border: none;
+        &__reset {
+            background: $button-reset-background-default;
+            &:active {
+                background: $button-reset-background-active;
             }
         }
-
+        &__results {
+            background: $button-results-background-default;
+            &:active {
+                background: $button-results-background-active;
+            }
+        }
+        &:hover {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
     }
 
 }

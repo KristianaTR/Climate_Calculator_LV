@@ -1,0 +1,43 @@
+.lever-steps-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 4px;
+    .lever-step {
+        height: 35px;
+        width: 35px;
+        background: $background-grey-mid;
+        transition: all300ms ease;
+        border-radius: 4px;
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $background-grey-light;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+            background-color: $background-grey-dark;
+        }
+        &.active {
+            background-color: $button-lever-steps-active;
+            &:hover {
+                box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);  
+            }
+        }
+    }
+    &.subsectors {
+        .lever-step {
+            height: 25px;
+            width: 25px;
+            &.active {
+                background-color: $button-lever-steps-active;
+                &:hover {
+                    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);  
+                }
+            }
+        }
+    }
+}

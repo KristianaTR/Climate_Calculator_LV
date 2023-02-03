@@ -13,6 +13,7 @@ $text-grey: #646569;
 $text-grey-dark:#49494D;
 $text-white: #FFFFFF;
 $text-black: #000000;
+$text-subsectors-hover: #67B2E8;
 $line-green: #A3D541;
 $line-grey-light: #D2D2D2;
 $line-grey-dark:#8E8F90;
@@ -24,6 +25,7 @@ $button-submenu-backgroung-active: #FFF3D3;
 $button-submit-email: #F3C34B;
 $button-results-background-default: #829A59;
 $button-results-background-active: #B5CC8D;
+$button-lever-steps-active: #949D85;
 
 @mixin full_size {
     min-height:100vh;
@@ -36,7 +38,7 @@ $viewport-width-tablet: 834px;
 $viewport-width-mobile: 375px;
 
 //container max-width
-$input-container-max-width: 400px;
+$input-container-max-width: 420px;
 $output-container-max-width: 804px;
 
 //container height
