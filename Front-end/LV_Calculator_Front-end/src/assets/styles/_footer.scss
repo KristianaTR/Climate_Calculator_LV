@@ -80,11 +80,10 @@
                         line-height: 26px;
                         letter-spacing: -0.02em;
                         color: $text-white;
-                        @media screen and (max-width:980px) {
-                            margin-top: auto;
-                        }
+                        margin-top: 16px;
                         @media screen and (max-width:700px) {
-                            margin: auto;
+                            margin: 45px auto auto auto;
+                            padding-bottom: 12px;
                         }
                     }
                     .form-fields {
@@ -134,9 +133,11 @@
                 @media screen and (max-width:980px) {
                     width: 100%;
                     justify-content: center;
+                    margin-bottom: 75px;
                 }
                 @media screen and (max-width:700px) {
                     flex-direction: column;
+                    margin-bottom: 45px;
                 }
             }
             .flex-container-two {
@@ -156,7 +157,6 @@
                     margin-right: 35px;
                     padding-left: 20px;
                     p {
-                        text-align: justify;
                         img {
                             float: left;
                             margin-right: 10px;

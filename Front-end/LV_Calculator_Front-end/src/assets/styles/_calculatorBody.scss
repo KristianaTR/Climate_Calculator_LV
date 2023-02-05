@@ -316,6 +316,10 @@
                 align-items: center;
                 justify-content: space-between;
                 margin: 26px;
+                position: relative;
+                @media screen and (max-width:1089px) {
+                    margin: 26px 26px 90px 26px;
+                }
                 span {
                     font-family: 'Rubik';
                     font-style: normal;
@@ -333,6 +337,7 @@
                     span {
                         padding: 4.5px 12px;
                         margin: 0 12px;
+                        white-space: nowrap;
                         &:hover {
                             cursor: pointer;
                             font-weight: 500;
@@ -344,6 +349,80 @@
                             font-weight: 500;
                             border-radius: 50px;
                             background: $button-submenu-backgroung-active;
+                        }
+                    }
+                    @media screen and (max-width:1089px) {
+                        display: none;
+                    }
+                }
+                .charts-dropdown {
+                    display: none;
+                    @media screen and (max-width:1089px) {
+                        display: flex;
+                        .menu-item {
+                            a {
+                                font-family: 'Rubik';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 17px;
+                                text-align: center;
+                                letter-spacing: -0.02em;
+                                color: $text-grey;
+                                text-decoration: none;
+                                padding: 4.5px 12px;
+                                margin: 0 12px;
+                                white-space: nowrap;
+                                cursor: pointer;
+                                &:active {
+                                    font-weight: 500;
+                                    border-radius: 50px;
+                                    background: $button-submenu-backgroung-active;
+                                }
+                            }
+                            svg {
+                                margin-left: 10px;
+                            }
+                            .fade-enter-active,
+                            .fade-leave-active {
+                                transition: all .5s ease-in-out;
+                            }
+                            .fade-enter,
+                            .fade-leave-to {
+                                opacity: 0;
+                            }
+                            .sub-menu {
+                                position: absolute;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-evenly;
+                                top: calc(100% + 4.5px);
+                                left: 0;
+                                width: max-content;
+                                height: max-content;
+                                //padding: 7px;
+                                .menu-item {
+                                    padding-top: 7px;
+                                    padding-bottom: 7px;
+                                    width: 100%;
+                                    margin-top: 3px;
+                                    border-bottom: solid 1px $line-grey-light;
+                                    cursor: pointer;
+                                    &:last-child {
+                                        border-bottom: none;
+                                    }
+                                    a {
+                                        //margin: 7px 21px;
+                                        font-family: 'Rubik';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 17px;
+                                        color: $text-grey;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -363,8 +442,14 @@
                 height: 100%;
                 width: 100%;
                 .chart-container {
-                    display: inline-block;
+                    display: flex;
                     width: 100%;
+                    &.chart-main {
+                        position: relative;
+                        margin: auto;
+                        height: 100%;
+                        width: 100%;
+                    }
                 }
             }
         }

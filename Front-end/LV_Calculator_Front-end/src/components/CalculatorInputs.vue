@@ -1,6 +1,6 @@
 <script setup>
     import InputsLeversSector from "./InputsLeversSector.vue";
-    import Dropdown from "./Dropdown.vue";
+    import DropdownInputs from "./DropdownInputs.vue";
     import ButtonInfo from "./ButtonInfo.vue";
     import ButtonReset from "./ButtonReset.vue";
 </script>
@@ -9,7 +9,7 @@
     <div class="calculator-inputs">
         <div class="inputs-navigation">
             <ButtonInfo></ButtonInfo>
-            <Dropdown title="Scenāriju piemēri" :items="scenarious"></Dropdown>
+            <DropdownInputs title="Scenāriju piemēri" :items="scenarious"></DropdownInputs>
             <ButtonReset></ButtonReset>
         </div>
         <div class="levers-container">
@@ -42,7 +42,7 @@
     export default {
         name: "CalculatorInputs",
         components: {
-            Dropdown,
+            DropdownInputs,
             InputsLeversSector,
             ButtonInfo,
             ButtonReset

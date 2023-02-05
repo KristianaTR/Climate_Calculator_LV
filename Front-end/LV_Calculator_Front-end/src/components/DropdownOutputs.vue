@@ -1,5 +1,5 @@
 <template>
-    <div class="scenario-dropdown">
+    <div class="charts-dropdown">
         <div class="menu-item" @click="isOpen = !isOpen">
             <a href="#">
                 {{ title }}
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-    name: 'dropdown',
+    name: 'dropdownOutputs',
     props: ['title', 'items'],
     data () {
         return {
@@ -29,4 +29,3 @@ export default {
     }
 }
 </script>
-

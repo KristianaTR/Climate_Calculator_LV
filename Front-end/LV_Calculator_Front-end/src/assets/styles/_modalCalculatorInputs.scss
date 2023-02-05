@@ -168,6 +168,10 @@
                             line-height: 17px;
                             color: $text-grey;
                             padding-left: 4px;
+                            @media screen and (max-width:520px) {
+                                font-size: 12px;
+                                line-height: 14px;
+                            }
                         }
                     }
                     .levers-column__steps {
@@ -233,6 +237,10 @@
                                             height: 24px;
                                         }
                                     }
+                                    @media screen and (max-width:520px) {
+                                        min-width: 151px;
+                                        max-width: 151px;
+                                    }
                                 }
                                 .lever-steps-container {
                                     display: grid;
@@ -266,6 +274,9 @@
                             }
                         }
                     }
+                    @media screen and (max-width:520px) {
+                        padding: 8px;
+                    }
                 }
             }
             .action-buttons-container {
@@ -274,6 +285,9 @@
                 align-items: center;
                 justify-content: space-between;
                 margin: 20px 20px 0 20px;
+            }
+            @media screen and (max-width:520px) {
+                padding: 8px;
             }
         }
     }
