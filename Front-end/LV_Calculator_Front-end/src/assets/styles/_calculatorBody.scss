@@ -33,22 +33,13 @@
                 border-radius: 4px;
                 margin-bottom: 8px;
                 position: relative;
-                .info-button {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                    &:hover {
-                        cursor: pointer;
-                    }
-                    span{
-                        content: url(../../components/icons/IconInfo.svg);
-                        height: 24px;
-                        width: 24px;
-                    }
-                }
                 .scenario-dropdown {
                     display: flex;
-                    flex: 2;
+                    padding-left: 10px;
                     .menu-item {
+                        width: 202px;
+                        box-sizing: border-box;
+                        padding-left: 19px;
                         a {
                             font-family: 'Rubik';
                             font-style: normal;

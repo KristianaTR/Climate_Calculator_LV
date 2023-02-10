@@ -3,23 +3,26 @@
     import DropdownInputs from "./DropdownInputs.vue";
     import ButtonInfo from "./ButtonInfo.vue";
     import ButtonReset from "./ButtonReset.vue";
+    import ModalSections from "./ModalSections.vue";
+    import ModalSteps from "./ModalSteps.vue";
 </script>
 
 <template>
     <div class="calculator-inputs">
+        <ModalSections v-show="showModalSections" @closeModal="showModalSections = false"></ModalSections>
+        <ModalSteps v-show="showModalSteps" @closeModal="showModalSteps = false"></ModalSteps>
         <div class="inputs-navigation">
-            <ButtonInfo></ButtonInfo>
             <DropdownInputs title="Scenāriju piemēri" :items="scenarious"></DropdownInputs>
             <ButtonReset></ButtonReset>
         </div>
         <div class="levers-container">
             <div class="levers-header">
                 <div class="levers-column__sectors">
-                    <ButtonInfo></ButtonInfo>
+                    <ButtonInfo @click="showModalSections = true"></ButtonInfo>
                     <p>Sadaļas</p>
                 </div>
                 <div class="levers-column__steps">
-                    <ButtonInfo></ButtonInfo>
+                    <ButtonInfo @click="showModalSteps = true"></ButtonInfo>
                     <p>Ambīciju līmenis:</p>
                 </div>
             </div>
@@ -45,7 +48,9 @@
             DropdownInputs,
             InputsLeversSector,
             ButtonInfo,
-            ButtonReset
+            ButtonReset,
+            ModalSections,
+            ModalSteps
         },
         data () {
             return {
@@ -128,12 +133,19 @@
                             'Elektroenerģijas imports'
                         ]
                     }
-                ]
+                ],
+                showModalSections: false,
+                showModalSteps: false
+            }
+        },
+        methods: {
+            openModalSections() {
+                this.showModalSections = true;
+            },
+            openModalSteps() {
+                this.showModalSteps = true;
             }
         }
-        // computed: {
-        //     Subsectors: this.leversSectors.subsectors,
-        // }
     }
 </script>
 

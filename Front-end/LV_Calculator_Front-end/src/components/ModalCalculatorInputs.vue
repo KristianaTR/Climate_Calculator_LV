@@ -5,14 +5,16 @@
     import ButtonInfo from "./ButtonInfo.vue";
     import ButtonReset from "./ButtonReset.vue";
     import ButtonResults from "./ButtonResults.vue";
+    import ModalSections from "./ModalSections.vue";
 </script>
 
 <template>
     <div class="modal-calculator-inputs-mask">
         <div class="modal-calculator-inputs-wrapper">
             <div class="modal-calculator-inputs-block">
+                <ModalSections v-show="showModalSections" @closeModal="showModalSections = false"></ModalSections>
                 <div class="inputs-navigation">
-                    <ButtonInfo></ButtonInfo>
+                    <ButtonInfo @click="showModalSections = true"></ButtonInfo>
                     <DropdownInputs title="Scenāriju piemēri" :items="scenarious"></DropdownInputs>
                     <ButtonCloseModal  @closeModal="$emit('closeModal')"></ButtonCloseModal>
                 </div>
@@ -57,7 +59,8 @@
             ButtonInfo,
             ButtonReset,
             ButtonResults,
-            DropdownInputs
+            DropdownInputs,
+            ModalSections
         },
         data () {
             return {
@@ -96,7 +99,13 @@
                         img: IconElectricity,
                         name: 'Enerģijas ražošana'
                     }
-                ]
+                ],
+                showModalSections: false,
+            }
+        },
+        methods: {
+            openModalSections() {
+                this.showModalSections = true;
             }
         }
     }
