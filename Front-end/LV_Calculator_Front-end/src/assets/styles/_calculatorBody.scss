@@ -440,12 +440,10 @@
                 height: 100%;
                 width: 100%;
                 .chart-container {
-                    display: flex;
-                    width: 100%;
-                    &.chart-main {
+                    padding: 0 30px 30px 30px;
+                    .chart-container-main {
+                        display: inline-block;
                         position: relative;
-                        margin: auto;
-                        height: 100%;
                         width: 100%;
                     }
                 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="chart-container chart-main">
+    <div class="chart-container-main">
         <Bar
             id="my-chart-id"
             :options="chartOptions"
