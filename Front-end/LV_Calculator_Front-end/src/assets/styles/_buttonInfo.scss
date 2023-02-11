@@ -1,6 +1,5 @@
 .button-info-container {
     .info-button {
-        padding: 0 10px 0 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -8,7 +7,6 @@
         width: 24px;
         &:hover {
             cursor: pointer;
-            //background-color: $icon-border-blue;
         }
         span{
             border: solid 2px $icon-border-blue;
