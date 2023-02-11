@@ -99,7 +99,7 @@
                     color: $text-grey;
                 }
             }
-            @media screen and (max-width:$viewport-width-tablet) {
+            @media screen and (max-width:920px) {
                 align-items: center;
                 nav.navigation-desktop {
                     display: none;
