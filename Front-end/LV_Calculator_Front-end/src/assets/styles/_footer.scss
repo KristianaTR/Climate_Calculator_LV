@@ -2,151 +2,169 @@
 .footer-wrapper {
     background: $background-grey-dark;
     flex-shrink: 0;
-    margin-top: 15px;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 50px 55px 18.5px 55px;
+    @media screen and (max-width:470px) {
+        padding-left: 20.5px;
+        padding-right: 20.5px;
+    }
     .footer-blocks {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         max-width: $viewport-width-desktop;
         margin: 0 auto;
-        padding: 0 34px;
-        .footer-blocks__container {
+        .footer-block {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
             width: 100%;
-            .flex-container-one {
+            &__upper {
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
-                align-items: flex-start;
-                flex: 2;
-                height: 100%;
-                .footer-list {
-                    display: flex;
-                    flex-direction: column;
-                    padding: 0;
-                    padding-right: 20px;
-                    list-style: none;
-                    white-space: nowrap;
-                    .menu-item {
-                        margin-bottom: 10px;
-                        a {
-                            font-family: 'Rubik';
-                            font-style: normal;
-                            font-weight: 500;
-                            font-size: 13px;
-                            line-height: 15px;
-                            letter-spacing: -0.04em;
-                            color: $text-white;
-                            text-transform: uppercase;
-                            text-decoration: none;
-                        }
-                        @media screen and (max-width:980px) {
-                            margin-right: 50px;
-                        }
-                        @media screen and (max-width:770px) {
-                            margin-right: 25px;
-                        }
-                    }
-                    @media screen and (max-width:980px) {
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
-                        margin-right: auto;
-                    }
-                    @media screen and (max-width:770px) {
-                        padding-right: 0;
-                        width: 100%;
-                    }
-                    @media screen and (max-width:400px) {
-                        grid-template-columns: repeat(1, 1fr);
-                    }
-                }
-                .footer-subscribe-newsletter {
-                    display: flex;
-                    flex-direction: column;
-                    height: 100%;
-                    padding-left: 80px;
-                    padding-right: 80px;
-                    border-left: solid 1px $line-grey-light;
-                    border-right: solid 1px $line-grey-light;
-                    h6 {
-                        font-family: 'Rubik';
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 22px;
-                        line-height: 26px;
-                        letter-spacing: -0.02em;
-                        color: $text-white;
-                        margin-top: 16px;
-                        @media screen and (max-width:700px) {
-                            margin: 45px auto auto auto;
-                            padding-bottom: 12px;
-                        }
-                    }
-                    .form-fields {
-                        width: 100%;
-                        max-width: 264px;
-                        padding-right: 43px;
-                        position: relative;
-                        box-sizing: border-box;
-                        input {
+                align-items: center;
+                margin-bottom: 51.5px;
+                .flex-container {
+                    width: 100%;
+                    &__footer-list {
+                        display: flex;
+                        flex: 1;
+                        .footer-list-container {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                             width: 100%;
-                            background: $background-grey-light;
-                            color: $text-grey;
-                            font-size: 16px;
-                            font-family: Rubik,sans-serif;
-                            border: none;
-                            padding: 10px 15px;
-                            outline: none;
-                        }
-                        .button-submit-email {
-                            position: absolute;
-                            top: 0;
-                            right: 0;
-                            width: 43px;
-                            height: 100%;
-                            background: $button-submit-email;
-                            border: none;
-                            span {
-                                content: url(../../components/icons/IconArrow-right.svg);
-                                display: inline-block;
-                                cursor: pointer;
+                            .footer-list {
+                                display: grid;
+                                grid-template-columns: repeat(2, 1fr);
+                                padding: 0;
+                                margin: auto;
+                                column-gap: 85px;
+                                width: fit-content;
+                                padding-right: 20px;
+                                list-style: none;
+                                white-space: nowrap;
+                                @media screen and (max-width:800px) {
+                                    column-gap: 30px;
+                                    width: 100%;
+                                }
+                                @media screen and (max-width:730px) {
+                                    column-gap: 85px;
+                                    width: 100%;
+                                    margin-bottom: 80px;
+                                }
+                                @media screen and (max-width:400px) {
+                                    grid-template-columns: repeat(1, 1fr);
+                                    width: 100%;
+
+                                }
+                                .menu-item {
+                                    margin-bottom: 10px;
+                                    a {
+                                        font-family: 'Rubik';
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 13px;
+                                        line-height: 15px;
+                                        letter-spacing: -0.04em;
+                                        color: $text-white;
+                                        text-transform: uppercase;
+                                        text-decoration: none;
+                                    }
+                                }
                             }
                         }
                     }
-                    @media screen and (max-width:1300px) {
-                        padding-left: 40px;
-                        padding-right: 40px;
-                    }
-                    @media screen and (max-width:980px) {
-                        border-right: none;
-                        margin-right: auto;
-                    }
-                    @media screen and (max-width:700px) {
-                        border-left: none;
-                        padding: 0;
+                    &__footer-contacts {
+                        display: flex;
+                        flex: 1;
+                        height: 100%;
+                        border-left: solid 1px $background-grey-mid;
+                        @media screen and (max-width:1015px) {
+                            justify-content: center;
+                            padding-left: 20px;
+                        }
+                        @media screen and (max-width:730px) {
+                            border-left: none;
+                            padding-left: 0;
+                            justify-content: left;
+                        }
+                        @media screen and (max-width:470px) {
+                            justify-content: left;
+                        }
+                        @media screen and (max-width:400px) {
+                            justify-content: left;
+                        }
+                        .footer-contacts-container {
+                            display: flex;
+                            flex-direction: column;
+                            padding-left: 127px;
+                            h2, p, a {
+                                font-family: 'Rubik';
+                                font-style: normal;
+                                line-height: 14px;
+                                letter-spacing: -0.02em;
+                                color: $text-white;
+                                white-space: nowrap;
+                            }
+                            h2 {
+                                font-weight: 500;
+                                font-size: 16px;
+                                margin: 0;
+                                padding-bottom: 37px;
+                                @media screen and (max-width:730px) {
+                                    padding-bottom: 35px;
+                                }
+                            }
+                            p, a {
+                                font-weight: 400;
+                                font-size: 14px;
+                                margin: 0;
+                                margin-bottom: 10px;
+                                text-decoration: none;
+                            }
+                            p {
+                                @media screen and (max-width:373px) {
+                                    white-space: normal;
+                                }
+                            }    
+                            .footer-contacts-list {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: left;
+                                margin-bottom: 8px;
+                                span {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                                p, a {
+                                    padding-left: 16px;
+                                    margin-bottom: 0;
+                                }
+                            }
+                            @media screen and (max-width:1015px) {
+                                padding-left: 0;
+                            }
+                        }
                     }
                 }
-                @media screen and (max-width:980px) {
-                    width: 100%;
-                    justify-content: center;
-                    margin-bottom: 75px;
-                }
-                @media screen and (max-width:700px) {
+                @media screen and (max-width:730px) {
                     flex-direction: column;
-                    margin-bottom: 45px;
+                    align-items: stretch;
+                    margin-bottom: 20px;
                 }
             }
-            .flex-container-two {
+            &__lower {
                 display: flex;
-                flex: 2;
-                .footer-contacts {
-                    display: flex;
-                    flex-direction: column;
-                    height: 100%;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding-top: 16px;
+                border-top: solid 1px $background-grey-mid;
+                @media screen and (max-width:730px) {
+                    justify-content: left;
+                }
+                p {
+                    padding-left: 8px;
                     font-family: 'Rubik';
                     font-style: normal;
                     font-weight: 400;
@@ -154,38 +172,9 @@
                     line-height: 14px;
                     letter-spacing: -0.02em;
                     color: $text-white;
-                    margin-right: 35px;
-                    padding-left: 20px;
-                    p {
-                        img {
-                            float: left;
-                            margin-right: 10px;
-                        }
-                    }
-                    @media screen and (max-width:980px) {
-                        margin-right: 0;
-                        padding-left: 0;
-                    }
-                }
-                @media screen and (max-width:930px) {
-                    flex-direction: column;
+                    margin: 0;
                 }
             }
-            @media screen and (max-width:980px) {
-                flex-direction: column;
-                align-items: stretch;
-            }
         }
-        @media screen and (max-width:980px) {
-            padding: 0 52px;
-        }
-        @media screen and (max-width:400px) {
-            padding: 0 30px;
-        }
-
-    }
-    @media screen and (max-width:980px) {
-        padding-top: 25px;
-        padding-bottom: 25px;
     }
 }
