@@ -7,7 +7,7 @@
     <div class="calculator-outputs">
         <div class="subtab-menu">
           <div class="subtab-menu-charts">
-            <span>CO2 emisijas</span>
+            <span class="active">CO2 emisijas</span>
             <span>Enerģijas ieguve</span>
             <span>Enerģijas patēriņš</span>
           </div>
