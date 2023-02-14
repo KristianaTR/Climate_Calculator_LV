@@ -6,6 +6,7 @@
     import ButtonReset from "./ButtonReset.vue";
     import ButtonResults from "./ButtonResults.vue";
     import ModalSections from "./ModalSections.vue";
+    import ModalSteps from "./ModalSteps.vue";
 </script>
 
 <template>
@@ -13,19 +14,19 @@
         <div class="modal-calculator-inputs-wrapper">
             <div class="modal-calculator-inputs-block">
                 <ModalSections v-show="showModalSections" @closeModal="showModalSections = false"></ModalSections>
+                <ModalSteps v-show="showModalSteps" @closeModal="showModalSteps = false"></ModalSteps>
                 <div class="inputs-navigation">
-                    <ButtonInfo @click="showModalSections = true"></ButtonInfo>
                     <DropdownInputs title="Scenāriju piemēri" :items="scenarious"></DropdownInputs>
                     <ButtonCloseModal  @closeModal="$emit('closeModal')"></ButtonCloseModal>
                 </div>
                 <div class="levers-container">
                     <div class="levers-header">
                         <div class="levers-column__sectors">
-                            <ButtonInfo></ButtonInfo>
-                            <p>Sadaļas</p>
+                            <ButtonInfo @click="showModalSections = true"></ButtonInfo>
+                            <p>Sektori:</p>
                         </div>
                         <div class="levers-column__steps">
-                            <ButtonInfo></ButtonInfo>
+                            <ButtonInfo @click="showModalSteps = true"></ButtonInfo>
                             <p>Ambīciju līmenis:</p>
                         </div>
                     </div>
@@ -34,10 +35,10 @@
                             <InputsLeversSector v-for="(leversSector, index) in leversSectors" :key="index" :content="leversSector"></InputsLeversSector>
                         </div>
                     </div>
-                </div>
-                <div class="action-buttons-container">
-                    <ButtonReset></ButtonReset>
-                    <ButtonResults @closeModal="$emit('closeModal')"></ButtonResults>
+                    <div class="action-buttons-container">
+                        <ButtonReset></ButtonReset>
+                        <ButtonResults @closeModal="$emit('closeModal')"></ButtonResults>
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,7 +61,8 @@
             ButtonReset,
             ButtonResults,
             DropdownInputs,
-            ModalSections
+            ModalSections,
+            ModalSteps
         },
         data () {
             return {
@@ -81,31 +83,79 @@
                 leversSectors: [
                     {
                         img: IconTransport,
-                        name: 'Transports'
+                        name: 'Transports',
+                        subsectors: [
+                            'Pasažieru transports', 
+                            'Pārslēgšanās uz 0 emisiju transportu', 
+                            'Nulles emisiju transporta veida izvēle',
+                            'Kravu pārvadājumi',
+                            'Starptautiskā aviācija',
+                            'Starptautiskā navigācija'
+                        ]
                     },
                     {
                         img: IconBuildings,
-                        name: 'Mājsaimniecība'
+                        name: 'Mājsaimniecība',
+                        subsectors: [
+                            'Vidējā temperatūra mājokļos',
+                            'Māju renovācija',
+                            'Māju apkures elektrifikācija',
+                            'Pārējās māju apkures sistēmas',
+                            'Apgaismojums un sadzīves tehnika',
+                            'Ēdienu gatavošamas tehnikas elektrifikācija'
+                        ]
                     },
                     {
                         img: IconIndustry,
-                        name: 'Komercdarbība'
+                        name: 'Komercdarbība',
+                        subsectors: [
+                            'Ražošanas izaugsme rūpniecībā',
+                            'Energointensitāte rūpniecībā',
+                            'Apkure un dzesēšanas patēriņš komercsektorā',
+                            'Apkures elektrifikācija komercsektorā',
+                            'Pārējās apkures sistēmas komercsektorā',
+                            'Apgaismojums un ierīces komercsektorā',
+                            'Komerciālā sektora ēdienu gatavošanas iekārtu elektrifikācija'
+                        ]
                     },
                     {
                         img: IconBioenergy,
-                        name: 'Bioenerģijas apgāde'
+                        name: 'Bioenerģijas apgāde',
+                        subsectors: [
+                            'Biomasas kurināmā veidi',
+                            'Bioenerģijas imports',
+                            'Bioenerģijai atvēlētās zemes platības',
+                            'Lopkopība',
+                            'Atkritumi un to reģenerācija',
+                            'Jūras aļģes'
+                        ]
                     },
                     {
                         img: IconElectricity,
-                        name: 'Enerģijas ražošana'
+                        name: 'Enerģijas ražošana',
+                        subsectors: [
+                            'Biomasa, elektroenerģijas ražošanas stacijas',
+                            'Elektrostacijas ar CCS',
+                            'Kurināmā izvēle CCS stacijās',
+                            'Sauszemes vēja stacijas',
+                            'Atkrastes vēja stacijas',
+                            'Saules PV elektroenerģijas ražošanai',
+                            'Saules paneļi siltumenerģijas ražošanai',
+                            'Mazas jaudas vēja stacijas',
+                            'Elektroenerģijas imports'
+                        ]
                     }
                 ],
                 showModalSections: false,
+                showModalSteps: false
             }
         },
         methods: {
             openModalSections() {
                 this.showModalSections = true;
+            },
+            openModalSteps() {
+                this.showModalSteps = true;
             }
         }
     }

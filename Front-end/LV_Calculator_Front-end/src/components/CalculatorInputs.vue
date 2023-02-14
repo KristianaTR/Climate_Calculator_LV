@@ -19,7 +19,7 @@
             <div class="levers-header">
                 <div class="levers-column__sectors">
                     <ButtonInfo @click="showModalSections = true"></ButtonInfo>
-                    <p>Sadaļas:</p>
+                    <p>Sektori:</p>
                 </div>
                 <div class="levers-column__steps">
                     <ButtonInfo @click="showModalSteps = true"></ButtonInfo>
