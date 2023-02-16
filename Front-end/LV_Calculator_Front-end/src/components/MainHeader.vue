@@ -1,6 +1,7 @@
 <script setup>
 import ModalHowToUse from './ModalHowToUse.vue';
 import ModalAbout from './ModalAbout.vue';
+import ModalNavigationSidebar from "./ModalNavigationSidebar.vue";
 </script>
 
 <template>
@@ -20,17 +21,14 @@ import ModalAbout from './ModalAbout.vue';
             </div>
             <div class="page-links">
                 <div class="burger-menu-icon">
-                    <span class="nav-hamburger" @click="toggleNav"></span>
+                    <span class="nav-hamburger" @click="openModalNavigationSidebar"></span>
                 </div>
                 <nav class="navigation-desktop">
                     <router-link to="/" class="page-link-item">Kalkulators</router-link>
                     <router-link to="/ka-lietot" class="page-link-item">Kā lietot?</router-link>
                     <router-link to="/par-projektu" class="page-link-item">Par projektu</router-link>
                 </nav>
-                <nav class="navigation-modal-windows">
-                    <a href="#" v-on:click="openModalHowToUse()">Kā lietot kalkulatoru?</a>
-                    <a href="#" v-on:click="openModalAbout()">Par projektu</a>
-                </nav>
+                <ModalNavigationSidebar v-show="showModalNavigationSidebar" @closeModal="showModalNavigationSidebar = false"></ModalNavigationSidebar>
             </div>
         </div>
     </div>
@@ -42,11 +40,13 @@ export default {
     components: {
         ModalHowToUse,
         ModalAbout,
+        ModalNavigationSidebar
     },
     data() {
         return {
         showModalHowToUse: false,
         showModalAbout: false,
+        showModalNavigationSidebar: false,
         }
     },
     methods: {
@@ -56,10 +56,13 @@ export default {
         openModalAbout() {
             this.showModalAbout = true;
         },
-        toggleNav() {
-            document.querySelector(".header-block .page-links").classList.toggle("open");
-            document.querySelector(".header-block .page-links .navigation-modal-windows").classList.toggle("open");
+        openModalNavigationSidebar() {
+            this.showModalNavigationSidebar = true;
         }
+        // toggleNav() {
+        //     document.querySelector(".header-block .page-links").classList.toggle("open");
+        //     document.querySelector(".header-block .page-links .navigation-modal-windows").classList.toggle("open");
+        // }
     }
 }
 </script>
