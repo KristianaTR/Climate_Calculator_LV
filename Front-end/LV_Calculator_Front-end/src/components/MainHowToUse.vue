@@ -1,24 +1,14 @@
 <template>
-    <div class="how-to-use-block--margin">
-        <div class="how-to-use-block">
-            <div class="how-to-use-tab-container">
-                <nav>
-                    <a href="#">Sadaļas</a>
-                    <a href="#">Ambīciju līmeņi</a>
-                    <a href="#">Grafiki</a>
-                    <a href="#">Apzīmējumi</a>
+    <div class="block-wrapper">
+        <div class="block-container">
+            <div class="tab-container">
+                <nav class="tab-links">
+                    <router-link class="tab-link-item" to="/ka-lietot">Kopsavilkums</router-link>
+                    <router-link class="tab-link-item" to="/ka-lietot/kalkulatora-uzbuve">Kalkulatora uzbūve</router-link>
+                    <router-link class="tab-link-item" to="/ka-lietot/scenariju-izveide">Sava scenārija izveide</router-link>
                 </nav>
             </div>
-            <div class="how-to-use-content-container">
-                <div class="how-to-use-img-container">
-                    <img src="" alt="image">
-                </div>
-                <div class="how-to-use-text-container">
-                    <h2>This is heading</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quisquam quasi voluptas dolore soluta, nulla quis eos illum aliquid, dignissimos laudantium consequuntur quaerat provident cupiditate ipsum beatae itaque quibusdam deserunt!</p>
-                </div>
-            </div>
-
+            <router-view></router-view>
         </div>
     </div>
 </template>

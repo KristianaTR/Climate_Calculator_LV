@@ -1,0 +1,26 @@
+.project-purpose {
+    flex-direction: column;
+    .content-blocks {
+        &:first-child {
+            flex-direction: row!important;
+            .content-block__text-container {
+                p, ul {
+                    width: 80%;
+                }
+            }
+        }
+        .content-block {
+            &__text-container {
+                h2 {
+                    width: 85%;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+            &__img-container {
+                margin-right: 80px;
+            }
+        }
+    }    
+}

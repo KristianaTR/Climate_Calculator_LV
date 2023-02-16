@@ -1,0 +1,35 @@
+.scenarious {
+    flex-direction: column;
+    .content-blocks {
+        flex-direction: row!important;
+        &:first-child {
+            margin-bottom: 36px;
+            .content-block {
+                &__img-container {
+                    img {
+                        &:first-child {
+                            margin-right: 58px;
+                        }
+                    }
+                }
+            }
+        }
+        .content-block {
+            &__text-container {
+                margin-right: 75px;
+                h2 {
+                    margin-top: 0;
+                    width: 30%;
+                }
+                p {
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+                ul {
+                    padding-inline-start: 20px;
+                }
+            }   
+        }
+    }
+}

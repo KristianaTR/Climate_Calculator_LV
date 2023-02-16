@@ -1,0 +1,37 @@
+.about-project {
+    .content-block {
+        &__text-container {
+            h2 {
+                width: 35%;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+            p {
+                a {
+                    text-decoration: none;
+                    color: $text-subsectors-hover;
+                    font-weight: 500;
+                }
+            }
+            &:last-child {
+                p {
+                    &:last-child {
+                        font-size: 12px!important;
+                        line-height: 14px!important;
+                        letter-spacing: -0.03em!important;
+                        margin-top: 63px;
+                    }
+                }
+            }
+        }
+        &__img-container {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin: 38px 0 59px 0;
+        }
+    }
+} 

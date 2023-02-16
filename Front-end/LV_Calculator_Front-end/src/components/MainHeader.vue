@@ -25,7 +25,7 @@ import ModalAbout from './ModalAbout.vue';
                 <nav class="navigation-desktop">
                     <router-link to="/" class="page-link-item">Kalkulators</router-link>
                     <router-link to="/ka-lietot" class="page-link-item">Kā lietot?</router-link>
-                    <router-link to="/par-kalkulatoru" class="page-link-item">Par projektu</router-link>
+                    <router-link to="/par-projektu" class="page-link-item">Par projektu</router-link>
                 </nav>
                 <nav class="navigation-modal-windows">
                     <a href="#" v-on:click="openModalHowToUse()">Kā lietot kalkulatoru?</a>

@@ -1,16 +1,18 @@
+<script setup>
+    import ButtonCloseModal from "./ButtonCloseModal.vue";
+</script>
+
+
 <template>
     <div class="modal-how-to-use-mask">
         <div class="modal-how-to-use-wrapper">
             <div class="modal-how-to-use-block">
+                <ButtonCloseModal  @closeModal="$emit('closeModal')"></ButtonCloseModal>
                 <div class="how-to-use-tab-container">
-                    <button class="modal-close-icon" @click="$emit('closeModal')" >
-                        <span></span>
-                    </button>
                     <nav>
-                        <a href="#">Sadaļas</a>
-                        <a href="#">Ambīciju līmeņi</a>
-                        <a href="#">Grafiki</a>
-                        <a href="#">Apzīmējumi</a>
+                        <a href="#">Kopsavilkums</a>
+                        <a href="#">Kalkulatora uzbūve</a>
+                        <a href="#">Sava scenārija izveide</a>
                     </nav>
                 </div>
                 <div class="how-to-use-content-container">
@@ -30,5 +32,6 @@
 <script>
 export default {
     name: 'ModalHowToUse',
+    components: ButtonCloseModal
 }
 </script>

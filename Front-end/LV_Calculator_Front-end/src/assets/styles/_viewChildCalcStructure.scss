@@ -1,0 +1,77 @@
+.calc-structure {
+    flex-direction: column;
+    align-items: center;
+    .content-blocks {
+        &:first-child {
+            .content-block__text-container {
+                display: flex;
+                background: $button-submenu-backgroung-hover;
+                max-height: 184px;
+                padding: 16.5px 46.5px 23.5px 6.5px;
+                box-sizing: border-box;
+                margin-top: 60px;
+                margin-bottom: 60px;
+                ol {
+                    -webkit-column-count: 3;
+                    -webkit-column-gap: 122px;
+                    -moz-column-count: 3;
+                    -moz-column-gap: 122px;
+                    column-count: 3;
+                    column-gap: 122px;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    li {
+                        font-size: 12px!important;
+                        line-height: 14px!important;
+                        letter-spacing: -0.03em!important;
+                        &:nth-child( n + 5 ) {
+                            float: left;
+                            margin-right: 6px;
+                            padding-right: 6px;
+                        }
+                        &:nth-child( n + 7 ) {
+                            float: inherit;
+                            margin-right: 0;
+                            padding-right: 0;
+                        }
+                        mark {
+                            color: $line-green;
+                            background: none;
+                        }
+                    }
+                }
+            }
+        }
+        &:last-child {
+            flex-direction: row!important;
+            .content-block {
+                &__text-container {
+                    &:first-child {
+                        margin-right: 120px;
+                    }
+                    h2 {
+                        margin-top: 0;
+                    }
+                    ul, ol {
+                        margin: 0;
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+        .content-block {
+            &__text-container {
+                display: flex;
+                flex:1;
+                flex-direction: column;
+                h2 {
+                    width: 25%;
+                }
+            }
+            &__img-container {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

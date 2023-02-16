@@ -35,9 +35,11 @@
                             <InputsLeversSector v-for="(leversSector, index) in leversSectors" :key="index" :content="leversSector"></InputsLeversSector>
                         </div>
                     </div>
-                    <div class="action-buttons-container">
-                        <ButtonReset></ButtonReset>
-                        <ButtonResults @closeModal="$emit('closeModal')"></ButtonResults>
+                    <div class="action-buttons-wrapper">
+                        <div class="action-buttons-container">
+                            <ButtonReset></ButtonReset>
+                            <ButtonResults @closeModal="$emit('closeModal')"></ButtonResults>
+                        </div>
                     </div>
                 </div>
             </div>
