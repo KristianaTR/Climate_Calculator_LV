@@ -1,7 +1,7 @@
 //main body starts-->
 .calculator-wrapper {
     background: $background-grey-light;
-    max-width: $viewport-width-desktop;
+    max-width: $viewport-width-desktop-min;
     padding: 40px 80px 40px 80px;
     // padding-bottom: 178px;
     .calculator-blocks {
@@ -220,7 +220,7 @@
     }
 }
 .partners-wrapper {
-    max-width: $viewport-width-desktop;
+    max-width: $viewport-width-desktop-min;
     padding: 0 80px 28px 80px;
     .partners-block {
         display: flex;

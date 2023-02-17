@@ -59,10 +59,6 @@ export default {
         openModalNavigationSidebar() {
             this.showModalNavigationSidebar = true;
         }
-        // toggleNav() {
-        //     document.querySelector(".header-block .page-links").classList.toggle("open");
-        //     document.querySelector(".header-block .page-links .navigation-modal-windows").classList.toggle("open");
-        // }
     }
 }
 </script>

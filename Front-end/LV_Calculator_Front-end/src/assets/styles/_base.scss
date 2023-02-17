@@ -33,9 +33,12 @@ $button-lever-steps-active: #949D85;
 }
 
 //viewport width
-$viewport-width-desktop: 1280px;
-$viewport-width-tablet: 834px;
-$viewport-width-mobile: 375px;
+$viewport-width-desktop-max: 1920px;
+$viewport-width-desktop-min: 1280px;
+$viewport-width-tablet-max: 1279px;
+$viewport-width-tablet-min: 834px;
+$viewport-width-mobile-max: 833px;
+$viewport-width-mobile-min: 375px;
 
 //container max-width
 $input-container-max-width: 420px;

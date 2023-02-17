@@ -15,11 +15,24 @@
                         <router-link to="/par-projektu" class="page-link-item">Par projektu</router-link>
                     </nav>
                 </div>
+                <div class="container__tab-mobile">
+                    <div class="tab-block">
+                        <h2>Kā lietot kalkulatoru?</h2>
+                        <nav class="tab-links">
+                            <router-link class="tab-link-item" to="/ka-lietot">Kopsavilkums</router-link>
+                            <router-link class="tab-link-item" to="/ka-lietot/kalkulatora-uzbuve">Kalkulatora uzbūve</router-link>
+                            <router-link class="tab-link-item" to="/ka-lietot/scenariju-izveide">Sava scenārija izveide</router-link>    
+                        </nav>
+                    </div>
+                    <div class="tab-block">
+                        <h2>Par projektu</h2>
+                        <nav class="tab-links">
+                            <router-link class="tab-link-item" to="/par-projektu" exact>Projekts</router-link>
+                            <router-link class="tab-link-item" to="/par-projektu/projekta-merki">Projekta mērķi</router-link>        
+                        </nav>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </template>
-<!-- <nav class="navigation-modal-windows">
-        <a href="#" v-on:click="openModalHowToUse()">Kā lietot kalkulatoru?</a>
-        <a href="#" v-on:click="openModalAbout()">Par projektu</a>
-    </nav> -->

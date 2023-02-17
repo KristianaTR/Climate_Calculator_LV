@@ -14,7 +14,7 @@
         .modal-sections-block {
             display: flex;
             flex-direction: column;
-            max-width: calc($viewport-width-desktop - $wrapper-margin-x);
+            max-width: calc($viewport-width-desktop-min - $wrapper-margin-x);
             margin: 0 35px;
             padding: 35px;
             background: $background-white;

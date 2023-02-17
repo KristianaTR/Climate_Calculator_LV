@@ -11,7 +11,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-width: $viewport-width-desktop;
+        max-width: $viewport-width-desktop-min;
         margin: 0 auto;
         .footer-block {
             display: flex;
