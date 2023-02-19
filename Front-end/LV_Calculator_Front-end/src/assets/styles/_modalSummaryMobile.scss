@@ -20,6 +20,7 @@
                 flex-direction: column;
                 max-width: $modal-container-width--mobile;
                 max-height: $modal-container-height--mobile;
+                box-sizing: border-box;
                 margin: auto;
                 background: $background-white;
                 border-radius: 4px;
