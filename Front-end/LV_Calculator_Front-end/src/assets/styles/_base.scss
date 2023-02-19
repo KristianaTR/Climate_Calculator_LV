@@ -43,10 +43,15 @@ $viewport-width-mobile-min: 375px;
 //container max-width
 $input-container-max-width: 420px;
 $output-container-max-width: 804px;
+$modal-container-width--desktop: 1212px;
+$modal-container-width--tablet: 727px;
+$modal-container-width--mobile: 335px;
 
 //container height
 $header-height: 124px;
 $footer-height: 165.969px;
+$modal-container-height--tablet: 833px;
+$modal-container-height--mobile: 560px;
 
 //wrapper margin
 $wrapper-margin-x: calc(35px * 2);

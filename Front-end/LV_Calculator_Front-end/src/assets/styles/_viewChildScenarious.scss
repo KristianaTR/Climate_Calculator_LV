@@ -17,9 +17,15 @@
         .content-block {
             &__text-container {
                 margin-right: 75px;
+                @media screen and (max-width:$viewport-width-mobile-max) {
+                    margin-right: 0;
+                }
                 h2 {
                     margin-top: 0;
                     width: 30%;
+                    @media screen and (max-width:$viewport-width-mobile-max) {
+                        width: 60%;
+                    }
                 }
                 p {
                     &:first-child {

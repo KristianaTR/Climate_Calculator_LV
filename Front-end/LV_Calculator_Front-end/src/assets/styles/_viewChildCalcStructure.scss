@@ -3,6 +3,11 @@
     align-items: center;
     .content-blocks {
         &:first-child {
+            .content-block__img-container {
+                img.img-mobile {
+                    display: none;
+                }
+            }
             .content-block__text-container {
                 display: flex;
                 background: $button-submenu-backgroung-hover;
@@ -11,7 +16,8 @@
                 box-sizing: border-box;
                 margin-top: 60px;
                 margin-bottom: 60px;
-                ol {
+                
+                ol.list-desktop {
                     -webkit-column-count: 3;
                     -webkit-column-gap: 122px;
                     -moz-column-count: 3;
@@ -34,11 +40,45 @@
                             margin-right: 0;
                             padding-right: 0;
                         }
-                        mark {
-                            color: $line-green;
-                            background: none;
+                    }
+                    @media screen and (max-width:$viewport-width-tablet-max) {
+                        display: none;
+                    }
+                }
+                ol.list-mobile {
+                    display: none;
+                    @media screen and (max-width:$viewport-width-mobile-max) {
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 20px;
+                    }
+                }
+                &.mobile {
+                    ol.list-mobile {
+                        li {
+                            &:nth-child( n + 2 ) {
+                                float: left;
+                                margin-right: 6px;
+                                padding-right: 6px;
+                            }
+                            &:nth-child( n + 5 ) {
+                                float: inherit;
+                                margin-right: 0;
+                                padding-right: 0;
+                            }
+                        }
+                        display: none;
+                        @media screen and (max-width:$viewport-width-mobile-max) {
+                            display: flex;
+                            flex-direction: column;
+                            padding-left: 20px;
                         }
                     }
+                }
+                @media screen and (max-width:$viewport-width-mobile-max) {
+                    background: $background-white;
+                    padding: 0;
+                    margin-top: 0;
                 }
             }
         }
@@ -64,6 +104,9 @@
                 display: flex;
                 flex:1;
                 flex-direction: column;
+                &.mobile {
+                    display: none!important;
+                }
                 h2 {
                     width: 25%;
                 }

@@ -1,0 +1,33 @@
+@import 'buttonScroll.scss';
+
+.content-container {
+    &.calc-structure {
+        .content-blocks {
+            &:last-child {
+                @media screen and (max-width:$viewport-width-mobile-max) {
+                    display: none!important;
+                }
+            }
+            .content-block {
+                &__img-container {
+                    img.img-mobile {
+                        @media screen and (max-width:$viewport-width-mobile-max) {
+                            display: flex!important;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                &__text-container {
+                    &.mobile {
+                       
+                        @media screen and (max-width:$viewport-width-mobile-max) {
+                            display: flex!important;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,30 +1,80 @@
-.how-to-use {
-    flex-direction: row;
-    .content-blocks {
-        &:first-child {
-            margin-right: 55px;
+// .view-wrapper {
+// }
+.content-container { 
+    &.summary {
+        flex-direction: row;
+        @media screen and (max-width:$viewport-width-tablet-max) {
+            flex-direction: column;
         }
-        .content-block {
-            &__text-container {
-                h2 {
-                    width: 80%;
-                }
-                p {
-                    &:first-child {
-                        margin-top: 0;
-                    }
+        @media screen and (max-width:$viewport-width-mobile-max) {
+            flex-direction: row;
+        }
+        .content-blocks {
+            &:first-child {
+                margin-right: 55px;
+                @media screen and (max-width:$viewport-width-tablet-max) {
+                    margin-right: 0;
                 }
             }
-            &__img-container {
-                display: flex;
-                margin-bottom: 64px;
-                //width: 660px;
-                img {
-                    object-fit: cover;
-                    // max-width: 100%;
-                    // height: auto;
+            .content-block {
+                width: 100%;
+                &__text-container {
+                    h2 {
+                        width: 80%;
+                    }
+                    p {
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
+                    @media screen and (max-width:$viewport-width-tablet-max) {
+                        .text-container-tablet-layout {
+                            display: flex;
+                            flex-direction: row;
+                            .text-column {
+                                flex: 1;
+                                &:first-child {
+                                    margin-right: 25px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &__img-container {
+                    display: flex;
+                    width: 100%;
+                    margin-bottom: 64px;
+                    @media screen and (max-width:$viewport-width-mobile-max) {
+                        width: 335px;
+                    }
+                    img {
+                        &:first-child {
+                            object-fit: cover;
+                            display: flex;
+                        }
+                        display: none;
+                    }
+                    p.picture-heading-mobile {
+                        display: none;
+                    }
+                    @media screen and (max-width:$viewport-width-tablet-max) {
+                        width: 641px;
+                        margin-top: 64px;
+                        padding-left: 4px;
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                            // object-fit: contain;
+                        }
+                    }
+                    @media screen and (max-width:$viewport-width-mobile-max) {
+                        width: 100%;
+                        margin-top: 0;
+                        padding-left: 0;
+                    }
                 }
             }
         }
     }
 }
+

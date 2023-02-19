@@ -21,6 +21,11 @@
                         line-height: 14px!important;
                         letter-spacing: -0.03em!important;
                         margin-top: 63px;
+                        @media screen and (max-width:$viewport-width-mobile-max) {
+                            margin-top: 0;
+                            border-top: solid 0.5px $line-grey-light;
+                            padding-top: 18.5px;
+                        }
                     }
                 }
             }
@@ -32,6 +37,16 @@
             justify-content: space-around;
             align-items: center;
             margin: 38px 0 59px 0;
+            @media screen and (max-width:$viewport-width-mobile-max) {
+                a {
+                    &:first-child {
+                        margin-bottom: 50px;
+                    }
+                    &.VARAM {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 } 

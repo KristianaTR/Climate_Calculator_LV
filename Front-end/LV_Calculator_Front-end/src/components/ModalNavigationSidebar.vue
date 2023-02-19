@@ -1,5 +1,10 @@
 <script setup>
     import ButtonCloseModal from "./ButtonCloseModal.vue";
+    import ModalSummaryMobile from "./ModalSummaryMobile.vue";
+    import ModalCalcStructureMobile from "./ModalCalcStructureMobile.vue";
+    import ModalScenariousMobile from "./ModalScenariousMobile.vue";
+    import ModalAboutProjectMobile from "./ModalAboutProjectMobile.vue";
+    import ModalProjectPurposeMobile from "./ModalProjectPurposeMobile.vue";
 </script>
 
 <template>
@@ -11,28 +16,76 @@
                 </div>
                 <div class="container__tab">
                     <nav class="tab-links">
+                        
+                        
                         <router-link to="/ka-lietot" class="page-link-item">Kā lietot kalkulatoru?</router-link>
                         <router-link to="/par-projektu" class="page-link-item">Par projektu</router-link>
                     </nav>
                 </div>
                 <div class="container__tab-mobile">
                     <div class="tab-block">
-                        <h2>Kā lietot kalkulatoru?</h2>
-                        <nav class="tab-links">
-                            <router-link class="tab-link-item" to="/ka-lietot">Kopsavilkums</router-link>
-                            <router-link class="tab-link-item" to="/ka-lietot/kalkulatora-uzbuve">Kalkulatora uzbūve</router-link>
-                            <router-link class="tab-link-item" to="/ka-lietot/scenariju-izveide">Sava scenārija izveide</router-link>    
-                        </nav>
+                        <h2 class="tab-heading">Kā lietot kalkulatoru?</h2>
+
+                        <span @click="showModalSummaryMobile = true" >Kopsavilkums</span>
+                        <ModalSummaryMobile v-show="showModalSummaryMobile" @closeModal="showModalSummaryMobile = false"></ModalSummaryMobile>
+                        
+                        <span @click="showModalCalcStructureMobile = true" >Kalkulatora uzbūve</span>
+                        <ModalCalcStructureMobile v-show="showModalCalcStructureMobile" @closeModal="showModalCalcStructureMobile = false"></ModalCalcStructureMobile>
+                        
+                        <span @click="showModalScenariousMobile = true" >Sava scenārija izveide</span>
+                        <ModalScenariousMobile v-show="showModalScenariousMobile" @closeModal="showModalScenariousMobile = false"></ModalScenariousMobile>
                     </div>
                     <div class="tab-block">
-                        <h2>Par projektu</h2>
-                        <nav class="tab-links">
-                            <router-link class="tab-link-item" to="/par-projektu" exact>Projekts</router-link>
-                            <router-link class="tab-link-item" to="/par-projektu/projekta-merki">Projekta mērķi</router-link>        
-                        </nav>
+                        <h2 class="tab-heading">Par projektu</h2>
+
+                        <span @click="showModalAboutProjectMobile = true" >Projekts</span>
+                        <ModalAboutProjectMobile v-show="showModalAboutProjectMobile" @closeModal="showModalAboutProjectMobile = false"></ModalAboutProjectMobile>
+
+                        <span @click="showModalProjectPurposeMobile = true" >Projekta mērķi</span>
+                        <ModalProjectPurposeMobile v-show="showModalProjectPurposeMobile" @closeModal="showModalProjectPurposeMobile = false"></ModalProjectPurposeMobile>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    name: 'ModalNavigationSidebar',
+    components: {
+        ButtonCloseModal,
+        ModalSummaryMobile,
+        ModalCalcStructureMobile,
+        ModalScenariousMobile,
+        ModalAboutProjectMobile,
+        ModalProjectPurposeMobile
+    },
+    data () {
+        return {
+            showModalSummaryMobile: false,
+            showModalCalcStructureMobile: false,
+            showModalScenariousMobile: false,
+            showModalAboutProjectMobile: false,
+            showModalProjectPurposeMobile: false,
+        }
+    },
+    methods: {
+        openModalSummaryMobile () {
+            this.showModalSummaryMobile = true;
+        },
+        openModalCalcStructureMobile () {
+            this.showModalCalcStructureMobile = true;
+        },
+        openModalScenariousMobile () {
+            this.showModalScenariousMobile = true;
+        },
+        openModalAboutProjectMobile () {
+            this.showModalAboutProjectMobile = true;
+        },
+        openModalProjectPurposeMobile () {
+            this.showModalProjectPurposeMobile = true;
+        }
+    }
+}
+</script>
