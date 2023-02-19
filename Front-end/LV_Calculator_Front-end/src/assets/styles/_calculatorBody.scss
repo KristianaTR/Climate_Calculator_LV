@@ -19,15 +19,11 @@
         @media screen and (max-width: $viewport-width-tablet-max) {
             max-width: 756px;
             box-sizing: border-box;
+            padding: 28px 39px 15px 39px;
         }
         @media screen and (max-width: $viewport-width-mobile-max) {
             max-width: $modal-container-width--mobile;
             box-sizing: border-box;
-        }
-        @media screen and (max-width:920px) {
-            padding: 28px 39px 15px 39px;
-        }
-        @media screen and (max-width:430px) {
             padding: 18px 20px 15px 20px;
         }
         .calculator-inputs {
@@ -149,6 +145,9 @@
                 @media screen and (max-width:1089px) {
                     margin: 26px 26px 90px 26px;
                 }
+                @media screen and (max-width: $viewport-width-mobile-max) {
+                    margin: 11.5px 11.5px 60px 11.5px;
+                }
                 span {
                     font-family: 'Rubik';
                     font-style: normal;
@@ -158,6 +157,10 @@
                     text-align: center;
                     letter-spacing: -0.02em;
                     color: $text-grey;
+                    @media screen and (max-width: $viewport-width-mobile-max) {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
                 }
                 .subtab-menu-charts {
                     display: flex;
@@ -186,6 +189,14 @@
                 }
                 .charts-dropdown {
                     display: none;
+                    padding: 4.5px 12px;
+                    @media screen and (max-width: $viewport-width-mobile-max) {
+                        padding: 4.5px 10px;
+                    }
+                    &:active {
+                        border-radius: 50px;
+                        background: $button-submenu-backgroung-active;
+                    }
                     @media screen and (max-width:920px) {
                         display: flex;
                         .menu-item {
@@ -199,14 +210,17 @@
                                 letter-spacing: -0.02em;
                                 color: $text-grey;
                                 text-decoration: none;
-                                padding: 4.5px 12px;
                                 margin: 0 12px;
                                 white-space: nowrap;
                                 cursor: pointer;
-                                &:active {
-                                    font-weight: 500;
-                                    border-radius: 50px;
-                                    background: $button-submenu-backgroung-active;
+                                // &:active {
+                                //     font-weight: 500;
+                                // }
+                                @media screen and (max-width: $viewport-width-mobile-max) {
+                                    font-size: 12px;
+                                    line-height: 14px;
+                                    padding-right: 4px;
+                                    margin: 0;
                                 }
                                 @media screen and (max-width:430px) {
                                     padding: 0;
@@ -242,6 +256,11 @@
                                     margin-top: 3px;
                                     border-bottom: solid 1px $line-grey-light;
                                     cursor: pointer;
+                                    @media screen and (max-width: $viewport-width-mobile-max) {
+                                        padding-top: 0;
+                                        padding-bottom: 4px;
+                                        margin-top: 0;
+                                    }
                                     &:last-child {
                                         border-bottom: none;
                                     }
@@ -253,6 +272,10 @@
                                         font-size: 14px;
                                         line-height: 17px;
                                         color: $text-grey;
+                                        @media screen and (max-width: $viewport-width-mobile-max) {
+                                            font-size: 12px;
+                                            line-height: 14px;
+                                        }
                                     }
                                 }
                             }
