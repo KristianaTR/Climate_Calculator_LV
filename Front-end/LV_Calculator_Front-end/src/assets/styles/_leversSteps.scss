@@ -24,6 +24,10 @@
         &.active {
             background-color: $button-lever-steps-active;
         }
+        @media screen and (max-width: $viewport-width-mobile-max) {
+            height: 30px;
+            width: 30px;
+        }
     }
     &.subsectors {
         .lever-step {

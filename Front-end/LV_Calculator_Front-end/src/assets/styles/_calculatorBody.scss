@@ -16,8 +16,13 @@
         max-width: calc($viewport-width-desktop-min - $wrapper-margin-x);
         padding: 50px 34px 15px 34px;
         margin: auto;
-        @media screen and (max-width:1254px) {
+        @media screen and (max-width: $viewport-width-tablet-max) {
             max-width: 756px;
+            box-sizing: border-box;
+        }
+        @media screen and (max-width: $viewport-width-mobile-max) {
+            max-width: $modal-container-width--mobile;
+            box-sizing: border-box;
         }
         @media screen and (max-width:920px) {
             padding: 28px 39px 15px 39px;
@@ -123,7 +128,7 @@
                     }
                 }
             }
-            @media screen and (max-width:1254px) {
+            @media screen and (max-width: $viewport-width-tablet-max) {
                 display: none;
             }
         }
