@@ -1,5 +1,7 @@
 <script setup>
     import ButtonCloseModal from "./ButtonCloseModal.vue";
+    import ModalHowToUseTablet from './ModalHowToUseTablet.vue';
+    import ModalAboutTablet from './ModalAboutTablet.vue';
     import ModalSummaryMobile from "./ModalSummaryMobile.vue";
     import ModalCalcStructureMobile from "./ModalCalcStructureMobile.vue";
     import ModalScenariousMobile from "./ModalScenariousMobile.vue";
@@ -14,13 +16,14 @@
                 <div class="container__heading">
                     <ButtonCloseModal  @closeModal="$emit('closeModal')"></ButtonCloseModal>
                 </div>
-                <div class="container__tab">
-                    <nav class="tab-links">
+                <div class="container__tab-tablet">
+                    <div class="tab-block">
+                        <span @click="showModalHowToUseTablet = true" >Kā lietot Kalkulatoru?</span>
+                        <ModalHowToUseTablet v-show="showModalHowToUseTablet" @closeModal="showModalHowToUseTablet = false"></ModalHowToUseTablet>
                         
-                        
-                        <router-link to="/ka-lietot" class="page-link-item">Kā lietot kalkulatoru?</router-link>
-                        <router-link to="/par-projektu" class="page-link-item">Par projektu</router-link>
-                    </nav>
+                        <span @click="showModalAboutTablet = true" >Par projektu</span>
+                        <ModalAboutTablet v-show="showModalAboutTablet" @closeModal="showModalAboutTablet = false"></ModalAboutTablet>
+                    </div>
                 </div>
                 <div class="container__tab-mobile">
                     <div class="tab-block">
@@ -55,6 +58,8 @@ export default {
     name: 'ModalNavigationSidebar',
     components: {
         ButtonCloseModal,
+        ModalHowToUseTablet,
+        ModalAboutTablet,
         ModalSummaryMobile,
         ModalCalcStructureMobile,
         ModalScenariousMobile,
@@ -64,6 +69,8 @@ export default {
     data () {
         return {
             showModalSummaryMobile: false,
+            showModalHowToUseTablet: false,
+            showModalAboutTablet: false,
             showModalCalcStructureMobile: false,
             showModalScenariousMobile: false,
             showModalAboutProjectMobile: false,
@@ -73,6 +80,12 @@ export default {
     methods: {
         openModalSummaryMobile () {
             this.showModalSummaryMobile = true;
+        },
+        openModalHowToUseTablet() {
+            this.showModalHowToUseTablet = true;
+        },
+        openModalAboutTablet() {
+            this.showModalAboutTablet = true;
         },
         openModalCalcStructureMobile () {
             this.showModalCalcStructureMobile = true;

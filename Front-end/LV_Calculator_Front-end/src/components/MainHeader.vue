@@ -1,13 +1,9 @@
 <script setup>
-import ModalHowToUse from './ModalHowToUse.vue';
-import ModalAbout from './ModalAbout.vue';
 import ModalNavigationSidebar from "./ModalNavigationSidebar.vue";
 </script>
 
 <template>
     <div class="header-wrapper">
-        <ModalHowToUse v-show="showModalHowToUse" @closeModal="showModalHowToUse = false"></ModalHowToUse>
-        <ModalAbout v-show="showModalAbout" @closeModal="showModalAbout = false"></ModalAbout>
         <div class="header-block">
             <div class="logo-block">
                 <div class="header-logo">
@@ -38,24 +34,14 @@ import ModalNavigationSidebar from "./ModalNavigationSidebar.vue";
 export default {
     name: 'MainHeader',
     components: {
-        ModalHowToUse,
-        ModalAbout,
         ModalNavigationSidebar
     },
     data() {
         return {
-        showModalHowToUse: false,
-        showModalAbout: false,
         showModalNavigationSidebar: false,
         }
     },
     methods: {
-        openModalHowToUse() {
-            this.showModalHowToUse = true;
-        },
-        openModalAbout() {
-            this.showModalAbout = true;
-        },
         openModalNavigationSidebar() {
             this.showModalNavigationSidebar = true;
         }

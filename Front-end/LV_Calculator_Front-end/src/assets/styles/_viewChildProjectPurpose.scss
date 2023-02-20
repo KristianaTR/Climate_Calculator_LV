@@ -1,40 +1,42 @@
 .project-purpose {
     flex-direction: column;
     .content-blocks {
-        &:first-child {
-            flex-direction: row!important;
-            .content-block__text-container {
-                p, ul {
-                    width: 80%;
-                    @media screen and (max-width:$viewport-width-mobile-max) {
-                        width: 100%;
+        &.project-purpose {
+            &:first-child {
+                flex-direction: row;
+                .content-block__text-container {
+                    p, ul {
+                        width: 80%;
+                        @media screen and (max-width:$viewport-width-mobile-max) {
+                            width: 100%;
+                        }
                     }
-                }
-                ul {
-                    @media screen and (max-width:$viewport-width-mobile-max) {
-                        padding-left: 20px;
-                    }
-                }
-            }
-        }
-        .content-block {
-            &__text-container {
-                h2 {
-                    width: 85%;
-                    @media screen and (max-width:$viewport-width-mobile-max) {
-                        width: 100%;
-                    }
-                    &:first-child {
-                        margin-top: 0;
+                    ul {
+                        @media screen and (max-width:$viewport-width-mobile-max) {
+                            padding-left: 20px;
+                        }
                     }
                 }
             }
-            &__img-container {
-                margin-right: 80px;
-                @media screen and (max-width:$viewport-width-mobile-max) {
-                    margin-right: 0;
-                    img {
-                        display: block!important;
+            .content-block {
+                &__text-container {
+                    h2 {
+                        width: 85%;
+                        @media screen and (max-width:$viewport-width-mobile-max) {
+                            width: 100%;
+                        }
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
+                }
+                &__img-container {
+                    margin-right: 80px;
+                    @media screen and (max-width:$viewport-width-tablet-max) {
+                        margin-right: 0;
+                        img {
+                            display: block!important;
+                        }
                     }
                 }
             }

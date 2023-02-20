@@ -1,6 +1,6 @@
 <template>
     <div class="content-container project-purpose">
-        <div class="content-blocks">
+        <div class="content-blocks project-purpose">
             <div class="content-block__text-container">
                 <h2>Latvijas siltumnīcefekta gāzes (SEG) emisijas un klimata politikas mērķi līdz 2050.gadam</h2>
                 <p>
