@@ -3,7 +3,7 @@
     .content-blocks {
         &.project-purpose {
             &:first-child {
-                flex-direction: row;
+                flex-direction: row!important;
                 .content-block__text-container {
                     p, ul {
                         width: 80%;

@@ -25,7 +25,7 @@
                 <img src="../assets/images/graph_project-goals.png" alt="img">
             </div>
         </div>
-        <div class="content-blocks">
+        <div class="content-blocks project-purpose">
             <div class="content-block__text-container">
                 <p>
                     <b>Tehnoloģisko risinājumu pieeja</b> ietver risinājumus, kas primāri vērsti uz tiešiem SEG emisiju samazinājumiem (tehnoloģiskie un procesu risinājumi). Īstenojot šo taktiku, ir jāparedz būtiskas investīcijas jaunās tehnoloģijās un esošās energosistēmas pārveidošanai.
