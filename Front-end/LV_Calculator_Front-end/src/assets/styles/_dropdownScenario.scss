@@ -30,49 +30,53 @@
         .fade-leave-to {
             opacity: 0;
         }
-        .sub-menu {
+        .shadow-wrapper {
+            overflow-y: hidden;
             position: absolute;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-            background: $background-white;
             top: calc(100% - 4px);
             left: 0;
-            width: 211px;
-            height: max-content;
-            border-radius: 0 0 4px 4px;
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
-            padding: 6px 11.5px 11.5px 11.5px;
-            box-sizing: border-box;
-            .menu-item {
-                background: $background-grey-light;
-                padding-top: 7px;
-                padding-bottom: 7px;
-                width: 100%;
-                margin-top: 3px;
+            .sub-menu {
                 display: flex;
-                justify-content: center;
-                padding-left: 0;
-                &:hover {
-                    cursor: pointer; 
-                }
-                a {
-                    font-family: 'Rubik';
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 14px;
-                    line-height: 17px;
-                    color: $text-grey;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                background: $background-white;
+                width: 211px;
+                height: max-content;
+                border-radius: 0 0 4px 4px;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                padding: 6px 11.5px 11.5px 11.5px;
+                box-sizing: border-box;
+                margin: 0 10px 10px 0;
+                .menu-item {
+                    background: $background-grey-light;
+                    padding-top: 7px;
+                    padding-bottom: 7px;
+                    width: 100%;
+                    margin-top: 3px;
+                    display: flex;
+                    justify-content: center;
+                    padding-left: 0;
                     &:hover {
-                        color: $text-subsectors-hover; 
+                        cursor: pointer; 
                     }
-                    @media screen and (max-width: $viewport-width-mobile-max) {
+                    a {
+                        font-family: 'Rubik';
+                        font-style: normal;
+                        font-weight: 400;
                         font-size: 14px;
-                        line-height: 17px
+                        line-height: 17px;
+                        color: $text-grey;
+                        &:hover {
+                            color: $text-subsectors-hover; 
+                        }
+                        @media screen and (max-width: $viewport-width-mobile-max) {
+                            font-size: 14px;
+                            line-height: 17px
+                        }
                     }
                 }
             }
         }
-    }
+        }
 }
