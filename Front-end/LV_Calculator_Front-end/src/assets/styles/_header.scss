@@ -6,14 +6,21 @@
     top:0;
     z-index: 99;
     border-bottom: solid 8px $background-grey-light;
+    padding: 0 20px;
     .header-block {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        max-width: $viewport-width-desktop-min;
-        padding: 0 34px;
+        max-width: calc($viewport-width-desktop-min - 2*34px);
         margin: auto;
         position: relative;
+        @media screen and (max-width:$viewport-width-tablet-max) {
+            max-width: calc($viewport-width-tablet-min - 2*39px);
+        }
+        @media screen and (max-width:$viewport-width-mobile-max) {
+            max-width: calc($viewport-width-mobile-min - 2*20px);
+            padding: 0;
+        }
         .logo-block {
             display: flex;
             flex-direction: row;
@@ -96,9 +103,6 @@
                     display: flex;
                 }
             }
-        }
-        @media screen and (max-width:440px) {
-            padding: 0 20px;
         }
     }
 }

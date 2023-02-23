@@ -3,7 +3,11 @@
     background: $background-grey-dark;
     flex-shrink: 0;
     padding: 50px 55px 18.5px 55px;
-    @media screen and (max-width:470px) {
+    @media screen and (max-width:$viewport-width-tablet-max) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media screen and (max-width:$viewport-width-mobile-max) {
         padding-left: 20.5px;
         padding-right: 20.5px;
     }
@@ -13,6 +17,12 @@
         justify-content: center;
         max-width: $viewport-width-desktop-min;
         margin: 0 auto;
+        @media screen and (max-width:$viewport-width-tablet-max) {
+            max-width: calc($viewport-width-tablet-min - 2*39px);
+        }
+        @media screen and (max-width:$viewport-width-mobile-max) {
+            max-width: $viewport-width-mobile-min;
+        }
         .footer-block {
             display: flex;
             width: 100%;
@@ -41,19 +51,11 @@
                                 padding-right: 20px;
                                 list-style: none;
                                 white-space: nowrap;
-                                @media screen and (max-width:800px) {
-                                    column-gap: 30px;
-                                    width: 100%;
-                                }
-                                @media screen and (max-width:730px) {
+                                @media screen and (max-width:$viewport-width-mobile-max) {
+                                    grid-template-columns: repeat(1, 1fr);
                                     column-gap: 85px;
                                     width: 100%;
-                                    margin-bottom: 80px;
-                                }
-                                @media screen and (max-width:400px) {
-                                    grid-template-columns: repeat(1, 1fr);
-                                    width: 100%;
-
+                                    margin-bottom: 42px;
                                 }
                                 .menu-item {
                                     margin-bottom: 10px;
@@ -81,21 +83,21 @@
                             justify-content: center;
                             padding-left: 20px;
                         }
-                        @media screen and (max-width:730px) {
+                        @media screen and (max-width:$viewport-width-mobile-max) {
                             border-left: none;
                             padding-left: 0;
-                            justify-content: left;
-                        }
-                        @media screen and (max-width:470px) {
-                            justify-content: left;
-                        }
-                        @media screen and (max-width:400px) {
                             justify-content: left;
                         }
                         .footer-contacts-container {
                             display: flex;
                             flex-direction: column;
                             padding-left: 127px;
+                            @media screen and (max-width:$viewport-width-tablet-max) {
+                                padding-left: 62px;
+                            }
+                            @media screen and (max-width:$viewport-width-mobile-max) {
+                                padding-left: 0;
+                            }
                             h2, p, a {
                                 font-family: 'Rubik';
                                 font-style: normal;
@@ -103,13 +105,16 @@
                                 letter-spacing: -0.02em;
                                 color: $text-white;
                                 white-space: nowrap;
+                                @media screen and (max-width:$viewport-width-mobile-min) {
+                                    white-space:break-spaces;
+                                }
                             }
                             h2 {
                                 font-weight: 500;
                                 font-size: 16px;
                                 margin: 0;
                                 padding-bottom: 37px;
-                                @media screen and (max-width:730px) {
+                                @media screen and (max-width:$viewport-width-mobile-max) {
                                     padding-bottom: 35px;
                                 }
                             }
@@ -141,13 +146,10 @@
                                     margin-bottom: 0;
                                 }
                             }
-                            @media screen and (max-width:1015px) {
-                                padding-left: 0;
-                            }
                         }
                     }
                 }
-                @media screen and (max-width:730px) {
+                @media screen and (max-width:$viewport-width-mobile-max) {
                     flex-direction: column;
                     align-items: stretch;
                     margin-bottom: 20px;
@@ -160,7 +162,7 @@
                 align-items: center;
                 padding-top: 16px;
                 border-top: solid 1px $background-grey-mid;
-                @media screen and (max-width:730px) {
+                @media screen and (max-width:$viewport-width-mobile-max) {
                     justify-content: left;
                 }
                 p {
