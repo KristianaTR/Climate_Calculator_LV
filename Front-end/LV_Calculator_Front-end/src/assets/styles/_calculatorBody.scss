@@ -14,10 +14,10 @@
         flex-direction: row;
         flex: 1;
         max-width: calc($viewport-width-desktop-min - 2*34px);
-        //max-width: calc($viewport-width-desktop-min - $wrapper-margin-x);
         padding: 50px 34px 15px 34px;
         margin: auto;
         @media screen and (max-width: $viewport-width-tablet-max) {
+            flex-direction: column;
             max-width: 756px;
             min-width: 756px;
             padding: 28px 39px 15px 39px;
@@ -315,14 +315,14 @@
     }
 }
 .partners-wrapper {
-    padding: 0 35px 20px 35px;
+    padding: 0 35px 53px 35px;
     .partners-block {
         display: flex;
         flex-direction: row;
         justify-content:center;
         align-items: center;
         max-width: $viewport-width-desktop-min;
-        padding-top: 20px;
+        padding-top: 38px;
         margin: auto;
         .brittish-embassy {
             margin-right: 125px;
