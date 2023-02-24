@@ -8,11 +8,12 @@
                 </p>
                 <p>
                     Virzība uz klimatneitralitāti un tās sasniegšana 2050.gadā ir Latvijas oglekļa mazietilpīgas attīstības stratēģijas virsmērķis. Tas ietver divus stratēģiskus mērķus:
-                    <ul>
-                        <li> <b>SEG emisiju samazināšana visos tautsaimniecības sektoros;</b> </li>
-                        <li> <b>CO2 piesaistes palielināšana.</b> </li>
-                    </ul>
                 </p>
+                <img src="../assets/images/graph_project-goals.png" alt="img">
+                <ul>
+                    <li><b>SEG emisiju samazināšana visos tautsaimniecības sektoros;</b></li>
+                    <li><b>CO2 piesaistes palielināšana.</b></li>
+                </ul>
                 <p>
                     Klimatneitralitāte ir stāvoklis, kurā cilvēka darbība rada “nulles neto” ietekmi uz klimata sistēmu. Šāda stāvokļa sasniegšanai nepieciešams līdzsvarot siltumnīcefekta gāzu emisijas ar oglekļa dioksīda piesaisti. Ir divas pamatpieejas klimatneitratātes sasniegšanai:
                     <ul>
@@ -29,7 +30,8 @@
             <div class="content-block__text-container">
                 <p>
                     <b>Tehnoloģisko risinājumu pieeja</b> ietver risinājumus, kas primāri vērsti uz tiešiem SEG emisiju samazinājumiem (tehnoloģiskie un procesu risinājumi). Īstenojot šo taktiku, ir jāparedz būtiskas investīcijas jaunās tehnoloģijās un esošās energosistēmas pārveidošanai.
-                    <br>
+                </p>
+                <p>
                     Savukārt, <b>dzīvesveida maiņas pieeja</b> ietver risinājumus, kas primāri vērsti uz dzīvesveida maiņu un netiešiem SEG emisiju samazinājumiem, īstenojot plašus sabiedrības informēšanas un izglītošanas pasākumus, kas vērsti uz patērētāju uzvedības maiņu. Pasākumi no abām šīm pieejām ir ietverti izstrādātajā kalkulatorā.
                 </p>
                 <p>

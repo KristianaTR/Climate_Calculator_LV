@@ -83,45 +83,40 @@
                                             font-weight: 500;
                                         }
                                     }
-                                    h2 {
-                                        font-weight: 500;
-                                        margin-bottom: 0;
-                                        border-bottom: solid 4px $button-submenu-backgroung-hover;
-                                    }
                                 }
-                                &__img-container {
-                                    @media screen and (max-width: $viewport-width-tablet-max) {
-                                        display: flex;
-                                        justify-content: center;
-                                    }
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                    margin-top: 33px;
-                                    margin-bottom: 46px;
-                                    img {
-                                        max-width: 100%;
-                                        max-height: 100%;
-                                        object-fit: cover;
-                                        display: block;
-                                        &:first-child {
-                                            display: none;
-                                        }
-                                        &.last {
-                                            margin-top: 45px;
-                                        }
-                                    }
-                                    p {
-                                        font-family: 'Rubik';
-                                        font-style: normal;
-                                        font-weight: 500;
-                                        font-size: 12px;
-                                        line-height: 14px;
-                                        letter-spacing: -0.04em;
-                                        color: $text-grey-dark;
-                                        text-align: center;
-                                    }
-                                }
+                                // &__img-container {
+                                //     @media screen and (max-width: $viewport-width-tablet-max) {
+                                //         display: flex;
+                                //         justify-content: center;
+                                //     }
+                                //     display: flex;
+                                //     flex-direction: column;
+                                //     align-items: center;
+                                //     margin-top: 33px;
+                                //     margin-bottom: 46px;
+                                //     img {
+                                //         max-width: 100%;
+                                //         max-height: 100%;
+                                //         object-fit: cover;
+                                //         display: block;
+                                //         &:first-child {
+                                //             display: none;
+                                //         }
+                                //         &.last {
+                                //             margin-top: 45px;
+                                //         }
+                                //     }
+                                //     p {
+                                //         font-family: 'Rubik';
+                                //         font-style: normal;
+                                //         font-weight: 500;
+                                //         font-size: 12px;
+                                //         line-height: 14px;
+                                //         letter-spacing: -0.04em;
+                                //         color: $text-grey-dark;
+                                //         text-align: center;
+                                //     }
+                                // }
                             }
                         }
                     }
