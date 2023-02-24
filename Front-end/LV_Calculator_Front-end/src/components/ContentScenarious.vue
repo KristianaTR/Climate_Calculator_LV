@@ -29,7 +29,7 @@
                     <li>Jebkuras izmaiņas ambīciju līmeņos tiek uzreiz atspoguļota grafikos.</li>
                     <li>Kā arī jebkuras izmaiņas uzreiz tiek atspoguļotas CO2 mērītājā (%), kas atrodas blakus grafikiem.</li>
                     <li>Kad vēlamais mērķis sasniegts, jūs varat saglabāt vai nosūtīt savu izspēlēto scenāriju izmantojot pogu “Dalīties”.</li>
-                    <li>Lai ambīciju līmeņus atgrieztu sākuma stāvoklī, nospiediet pogu “Atiestātīt”.</li>
+                    <li>Lai ambīciju līmeņus atgrieztu sākuma stāvoklī, nospiediet pogu “Atiestatīt”.</li>
                     <li>Veiksmīgu izpēti!</li>
                 </ul>
             </div>   

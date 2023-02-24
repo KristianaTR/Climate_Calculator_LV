@@ -8,15 +8,15 @@
             </div>
             <div class="content-block__text-container">
                 <ol class="list-desktop">
-                    <li>Scenāriju piemēri - izvēlnē iespējams izvēlēties kādu no sagatavotajiem scenāriju piemēriem</li>
+                    <li>Scenāriju piemēri - izvēlnē iespējams izvēlēties kādu no sagatavotajiem scenāriju piemēriem.</li>
                     <li>Sektori - valsts enerģētikas un emisiju sistēma.</li>
                     <li>Ambīciju līmenis - iespējas izvēlēties cik lielas pārmaiņas vēlaties veikt.</li>
-                    <li>Kalkulātora iestatījumus atgriezt sākuma pozīcijā (visi līmeņi atgriezti uz 1).</li>
+                    <li>Kalkulatora iestatījumus atgriezt sākuma pozīcijā (visi līmeņi atgriezti uz 1).</li>
                     <li>,</li>
                     <li>,</li>
-                    <li>Logs, kurā tiek atspoguļots izvēlētais grafiks</li>
-                    <li>Iespēja dalīties ar savu izveidoto scenāriju (nokopēta web-linka veidā)</li>
-                    <li> CO2 mērītājs, kas atspoguļo izvēlētā scenārija CO2 emisiju līmeņa samazinājumu 2060.gadā attiecībā pret bāzes gadu (1990. gads)</li>
+                    <li>Logs, kurā tiek atspoguļots izvēlētais grafiks.</li>
+                    <li>Iespēja dalīties ar savu izveidoto scenāriju (nokopēta web-linka veidā).</li>
+                    <li> CO2 mērītājs, kas atspoguļo izvēlētā scenārija CO2 emisiju līmeņa samazinājumu 2060.gadā attiecībā pret bāzes gadu (1990. gads).</li>
                     <li>Grafiks, kas atspoguļo jūsu izvēles.</li>
                     <li>Ambīciju izvēlnes.</li>
                     <li>Apakšsektoru ambīciju izvēlnes.</li>
@@ -26,15 +26,15 @@
                     <li>Paplašināts skaidrojums par sektoriem vai ambīcijām.</li>
                 </ol>
                 <ol class="list-tablet">
-                    <li>Scenāriju piemēri - izvēlnē iespējams izvēlēties kādu no sagatavotajiem scenāriju piemēriem</li>
+                    <li>Scenāriju piemēri - izvēlnē iespējams izvēlēties kādu no sagatavotajiem scenāriju piemēriem.</li>
                     <li>Sektori - valsts enerģētikas un emisiju sistēma.</li>
                     <li>Ambīciju līmenis - iespējas izvēlēties cik lielas pārmaiņas vēlaties veikt.</li>
                     <li>Izveido savu scenāriiju - atveras sektoru un ambīciju līmeņu logs.</li>
                     <li>,</li>
                     <li>,</li>
-                    <li>Logs, kurā tiek atspoguļots izvēlētais grafiks</li>
-                    <li>Iespēja dalīties ar savu izveidoto scenāriju (nokopēta web-linka veidā)</li>
-                    <li> CO2 mērītājs, kas atspoguļo izvēlētā scenārija CO2 emisiju līmeņa samazinājumu 2060.gadā attiecībā pret bāzes gadu (1990. gads)</li>
+                    <li>Logs, kurā tiek atspoguļots izvēlētais grafiks.</li>
+                    <li>Iespēja dalīties ar savu izveidoto scenāriju (nokopēta web-linka veidā).</li>
+                    <li> CO2 mērītājs, kas atspoguļo izvēlētā scenārija CO2 emisiju līmeņa samazinājumu 2060.gadā attiecībā pret bāzes gadu (1990. gads).</li>
                     <li>Grafiks, kas atspoguļo jūsu izvēles.</li>
                     <li>Apakšsektoru ambīciju izvēlnes.</li>
                     <li>Ambīciju izvēlnes.</li>
@@ -46,7 +46,7 @@
                     <li>Paplašināts skaidrojums par sektoriem vai ambīcijām.</li>
                 </ol>
                 <ol class="list-mobile">
-                    <li>Scenāriju piemēri - izvēlnē iespējams izvēlēties kādu no sagatavotajiem scenāriju piemēriem</li>
+                    <li>Scenāriju piemēri - izvēlnē iespējams izvēlēties kādu no sagatavotajiem scenāriju piemēriem.</li>
                     <li>Sektori - valsts enerģētikas un emisiju sistēma.</li>
                     <li>Ambīciju līmenis - iespējas izvēlēties cik lielas pārmaiņas vēlaties veikt.</li>
                     <li>Apakšsektoru ambīciju izvēlnes.</li>
