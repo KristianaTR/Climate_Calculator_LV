@@ -117,7 +117,15 @@
                     margin-top: 23px;
                     margin-bottom: 35px;
                     overflow-y: scroll;
-                    max-height: 400px;
+                    overscroll-behavior-y: contain;
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    overflow-x: hidden;
+                    max-width: 400px;
+                    max-height: calc(500px - 23px - 35px - 52px);
                     .levers {
                         display: flex;
                         flex-direction: column;

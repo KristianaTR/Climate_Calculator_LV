@@ -114,6 +114,11 @@
                     max-height: 504px;
                     overflow-y: auto;
                     overscroll-behavior-y: contain;
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
                     @media screen and (max-width: $viewport-width-mobile-max) {
                         min-height: 288px;
                         max-height: 288px;

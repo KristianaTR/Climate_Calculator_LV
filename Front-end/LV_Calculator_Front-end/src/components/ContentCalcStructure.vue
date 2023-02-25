@@ -40,7 +40,7 @@
                     <li>Ambīciju izvēlnes.</li>
                     <li>Rezultāts - poga, kas atgriezīs grafika skatu ar jūsu veiktajām izvēlēm.</li>
                     <li>Kalkulātora iestatījumus atgriezt sākuma pozīcijā (visi līmeņi atgriezti uz 1).</li>
-                    <li>Galvenie sekotori.</li>
+                    <li>Galvenie sektori.</li>
                     <li>Apakšsektori (apakšsektoriem, kuri iekrāsojas zilā krāsā ir pieejams paplašināts skaidrojums).</li>
                     <li>Apakšsektoru ambīciju līmeņa skaidrojums.</li>
                     <li>Paplašināts skaidrojums par sektoriem vai ambīcijām.</li>
@@ -53,7 +53,7 @@
                     <li>Ambīciju izvēlnes.</li>
                     <li>Rezultāts - poga, kas atgriezīs grafika skatu ar jūsu veiktajām izvēlēm.</li>
                     <li>Kalkulātora iestatījumus atgriezt sākuma pozīcijā (visi līmeņi atgriezti uz 1).</li>
-                    <li>Galvenie sekotori.</li>
+                    <li>Galvenie sektori.</li>
                     <li>Apakšsektori (apakšsektoriem, kuri iekrāsojas zilā krāsā ir pieejams paplašināts skaidrojums).</li>
                     <li>Apakšsektoru ambīciju līmeņa skaidrojums.</li>
                     <li>Paplašināts skaidrojums par sektoriem vai ambīcijām.</li>
