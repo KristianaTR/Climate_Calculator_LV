@@ -129,7 +129,10 @@
             }
         }
         &:last-child {
-            flex-direction: row;
+            flex-direction: row!important;
+            @media screen and (max-width:$viewport-width-tablet-max) {
+                flex-direction: column!important;
+            }
             .content-block {
                 &__text-container {
                     &:first-child {
