@@ -106,12 +106,14 @@
                                     font-family: 'Rubik';
                                     font-style: normal;
                                     font-weight: 400;
-                                    font-size: 13px;
-                                    line-height: 15px;
-                                    letter-spacing: -0.04em;
+                                    font-size: 14px;
+                                    line-height: 17px;
+                                    letter-spacing: -0.02em;
                                     color: $text-grey-dark;
-                                    @media screen and (max-width: $viewport-width-mobile-max) {
-                                        text-align: justify;
+                                    @media screen and (max-width: $viewport-width-tablet-max) {
+                                        font-size: 13px;
+                                        line-height: 15px;
+                                        letter-spacing: -0.04em;
                                     }
                                     b {
                                         font-weight: 500;
