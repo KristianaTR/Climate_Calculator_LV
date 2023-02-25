@@ -103,16 +103,16 @@
                     ol.list-mobile {
                         display: none;
                         @media screen and (max-width:$viewport-width-mobile-max) {
-                            display: flex;
+                            display: block;
                             flex-direction: column;
                             padding-left: 20px;
                             li {
                                 &:nth-child( n + 2 ) {
                                     float: left;
-                                    margin-right: 6px;
-                                    padding-right: 6px;
+                                    margin-right: 12px;
+                                    padding-right: 12px;
                                 }
-                                &:nth-child( n + 5 ) {
+                                &:nth-child( n + 4 ) {
                                     float: inherit;
                                     margin-right: 0;
                                     padding-right: 0;
