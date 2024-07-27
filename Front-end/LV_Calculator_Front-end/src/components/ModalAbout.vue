@@ -1,0 +1,33 @@
+<template>
+    <div class="modal-about-mask">
+        <div class="modal-about-wrapper">
+            <div class="modal-about-block">
+                <button class="modal-close-icon" @click="$emit('closeModal')" >
+                    <span></span>
+                </button>
+                <div class="modal-about-block__text-content">
+                    <h2>This is heading</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quisquam quasi voluptas dolore soluta, nulla quis eos illum aliquid, dignissimos laudantium consequuntur quaerat provident cupiditate ipsum beatae itaque quibusdam deserunt!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quisquam quasi voluptas dolore soluta, nulla quis eos illum aliquid, dignissimos laudantium consequuntur quaerat provident cupiditate ipsum beatae itaque quibusdam deserunt!</p>
+                </div>
+                <div class="modal-about-block__text-content">
+                    <h2>This is heading</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quisquam quasi voluptas dolore soluta, nulla quis eos illum aliquid, dignissimos laudantium consequuntur quaerat provident cupiditate ipsum beatae itaque quibusdam deserunt!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quisquam quasi voluptas dolore soluta, nulla quis eos illum aliquid, dignissimos laudantium consequuntur quaerat provident cupiditate ipsum beatae itaque quibusdam deserunt!</p>
+                </div>
+                <div class="modal-about-block__text-content">
+                    <h2>This is heading</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quisquam quasi voluptas dolore soluta, nulla quis eos illum aliquid, dignissimos laudantium consequuntur quaerat provident cupiditate ipsum beatae itaque quibusdam deserunt!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quisquam quasi voluptas dolore soluta, nulla quis eos illum aliquid, dignissimos laudantium consequuntur quaerat provident cupiditate ipsum beatae itaque quibusdam deserunt!</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'ModalAbout'
+}
+</script>

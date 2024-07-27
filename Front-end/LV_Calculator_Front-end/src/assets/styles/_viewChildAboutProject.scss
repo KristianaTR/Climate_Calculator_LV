@@ -1,0 +1,52 @@
+.about-project {
+    .content-block {
+        &__text-container {
+            h2 {
+                width: 35%;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+            p {
+                a {
+                    text-decoration: none;
+                    color: $text-subsectors-hover;
+                    font-weight: 500;
+                }
+            }
+            &:last-child {
+                p {
+                    &:last-child {
+                        font-size: 12px!important;
+                        line-height: 14px!important;
+                        letter-spacing: -0.03em!important;
+                        margin-top: 63px;
+                        @media screen and (max-width:$viewport-width-mobile-max) {
+                            margin-top: 0;
+                            border-top: solid 0.5px $line-grey-light;
+                            padding-top: 18.5px;
+                        }
+                    }
+                }
+            }
+        }
+        &__img-container {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin: 38px 0 59px 0;
+            @media screen and (max-width:$viewport-width-mobile-max) {
+                a {
+                    &:first-child {
+                        margin-bottom: 50px;
+                    }
+                    &.VARAM {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+} 

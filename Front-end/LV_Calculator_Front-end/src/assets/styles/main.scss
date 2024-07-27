@@ -1,14 +1,20 @@
 @import 'base.scss';
 @import 'header.scss';
-@import'calculatorBody.scss';
-@import 'howToUseBody.scss';
+@import 'calculatorBody.scss';
+@import 'viewsBase.scss';
 @import 'footer.scss';
+// @import 'modalHowToUse.scss';
+// @import 'modalAbout.scss';
+@import 'modalCalculatorInputs.scss';
+@import 'modalSections.scss';
+@import 'modalSteps.scss';
 
 
 body {
     background: $background-grey-light;
     margin: 0;
     @include full_size;
+    overflow-x: hidden;
 }
 
 .main-wrapper {

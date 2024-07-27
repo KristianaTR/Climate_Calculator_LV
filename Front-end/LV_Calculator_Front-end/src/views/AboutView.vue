@@ -1,12 +1,13 @@
 <script setup>
 import MainHeader from "../components/MainHeader.vue";
+import MainAbout from "../components/MainAbout.vue";
 import MainFooter from "../components/MainFooter.vue";
 </script>
 
 <template>
-    <div class="parKalkulatoru-wrapper">
+    <div class="about-wrapper">
         <MainHeader></MainHeader>
-        <p>šis ir par palkulatoru</p>
+        <MainAbout></MainAbout>
         <MainFooter></MainFooter>
     </div>
 </template>

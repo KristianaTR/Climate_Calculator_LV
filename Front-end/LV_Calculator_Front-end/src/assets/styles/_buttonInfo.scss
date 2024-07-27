@@ -1,0 +1,25 @@
+.button-info-container {
+    .info-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        width: 24px;
+        &:hover {
+            cursor: pointer;
+        }
+        span{
+            border: solid 2px $icon-border-blue;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 18px;
+            width: 18px;
+            &:hover {
+                background-color: $icon-border-blue;
+            }
+        }
+    }
+}

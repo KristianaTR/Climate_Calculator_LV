@@ -1,0 +1,218 @@
+@import 'buttonCloseModal.scss';
+@import 'buttonInfo.scss';
+@import 'buttonsAction.scss';
+@import 'dropdownScenario.scss';
+@import 'inputsLeversSector.scss';
+@import 'leversSteps.scss';
+
+.modal-calculator-inputs-mask {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: table;
+    transition: opacity 0.3s ease;
+    .modal-calculator-inputs-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        .modal-calculator-inputs-block {
+            display: flex;
+            flex-direction: column;
+            width: max-content;
+            max-width: calc($viewport-width-desktop-min - $wrapper-margin-x);
+            margin: 0 auto;
+            padding: 22.5px 30.5px 27.5px 30.5px;
+            background: $background-grey-light;
+            border-radius: 4px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+            @media screen and (max-width: $viewport-width-mobile-max) {
+                max-width: $modal-container-width--mobile;
+                max-height: 500px;
+                box-sizing: border-box;
+                padding: 8px;
+            }
+            .inputs-navigation {
+                z-index: 99;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                height:60px;
+                background: $background-white;
+                border-radius: 4px;
+                margin-bottom: 12px;
+                position: relative;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+                box-sizing: border-box;
+                @media screen and (max-width: $viewport-width-mobile-max) {
+                    margin-bottom: 8px;
+                    height: 50px;
+                }
+                .button-close-container {
+                    flex: 2;
+                    height: 100%;
+                    justify-content: right;
+                    .modal-close-icon {
+                        padding: 20.5px;
+                    }
+                }
+            }
+            .levers-container {
+                display: flex;
+                flex-direction: column;
+                justify-content:flex-start;
+                align-items: center;
+                background: $background-white;
+                border-radius: 4px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                .levers-header {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 0 17px;
+                    box-sizing: border-box;
+                    @media screen and (max-width: $viewport-width-mobile-max) {
+                        padding: 0 6px;
+                    }
+                    .levers-column__sectors, .levers-column__steps {
+                        display: flex;
+                        flex-direction: row;
+                        flex: 2;
+                        align-items: center;
+                        border-bottom: 1px solid $background-grey-mid;
+                        p {
+                            font-family: 'Rubik';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: $text-grey;
+                            padding-left: 4px;
+                            margin: 17.5px 0;
+                            @media screen and (max-width: $viewport-width-mobile-max) {
+                                font-size: 12px;
+                                line-height: 14px;
+                            }
+                        }
+                    }
+                    .levers-column__steps {
+                        padding-left: 18px;
+                        @media screen and (max-width: $viewport-width-mobile-max) {
+                            padding-left: 0;
+                        }
+                    }
+                }
+                .levers-table {
+                    display: flex;
+                    width: 100%;
+                    box-sizing: border-box;
+                    min-height: 504px;
+                    max-height: 504px;
+                    overflow-y: auto;
+                    overscroll-behavior-y: contain;
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    @media screen and (max-width: $viewport-width-mobile-max) {
+                        min-height: 288px;
+                        max-height: 288px;
+                    }
+                    .levers {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: center;
+                        width: 100%;
+                        padding: 22px 16px 22px 2px;
+                        margin: 0 17px;
+                        @media screen and (max-width: $viewport-width-mobile-max) {
+                           padding: 12px 20px 12px 8px; 
+                           margin: 0;
+                        }
+                        .levers-sector-container {
+                            &:nth-child(3) {
+                                .sector-logo {
+                                    img {
+                                        @media screen and (max-width: $viewport-width-mobile-max) {
+                                            height: 18.73px!important;
+                                        }
+                                    }
+                                }
+                            }
+                            .levers-sector {
+                                padding: 0 0 8px 0;
+                                .card {
+                                    height: 35px;
+                                    @media screen and (max-width: $viewport-width-mobile-max) {
+                                        width: 151px;
+                                    }
+                                    .sector-logo {
+                                        img {
+                                            height: 24px;
+                                        }
+                                    }
+                                    .sector-name {
+                                        font-size: 12px;
+                                        line-height: 14px;
+                                    }
+                                }
+                            }
+                            .levers-subsector-container {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                align-items: center;
+                                padding: 0;
+                                width: 355.5px;
+                                @media screen and (max-width: $viewport-width-mobile-max) {
+                                    width: 291px;
+                                }
+                                .levers-subsectors {
+                                    .subsector-container {
+                                        .subsector-name {
+                                            white-space: normal;
+                                            @media screen and (max-width: $viewport-width-mobile-max) {
+                                                padding-left: 2px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @media screen and (max-width:520px) {
+                        padding: 8px;
+                    }
+                }
+            }
+            .action-buttons-wrapper {
+                display: flex;
+                width: 100%;
+                .action-buttons-container {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0 19px 0 19px;
+                    padding: 24px 0 17.5px 0;
+                    box-sizing: border-box;
+                    border-top: 1px solid $background-grey-mid;
+                    @media screen and (max-width: $viewport-width-mobile-max) {
+                        padding: 14.5px 0;
+                        margin: 0 8px 0 8px;
+                    }
+                }
+                @media screen and (max-width:520px) {
+                    padding: 8px;
+                }
+            }
+        }
+    }
+}

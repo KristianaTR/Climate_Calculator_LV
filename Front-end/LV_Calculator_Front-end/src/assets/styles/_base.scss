@@ -2,17 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 //colors
-$background-grey-light: #F3F3F3;
+$background-grey-light: #F1F1F1;
+$background-grey-mid: #D9D9D9;
+$background-grey-light-gradient-full: rgb(243, 243, 243, 1);
+$background-grey-light-gradient-transp: rgb(243, 243, 243, 0.5);
 $background-white: #FFFFFF;
 $background-grey-dark: #8E8F90;
+$tab-background:#FFFFFF;
 $text-grey: #646569;
 $text-grey-dark:#49494D;
 $text-white: #FFFFFF;
 $text-black: #000000;
+$text-subsectors-hover: #67B2E8;
 $line-green: #A3D541;
 $line-grey-light: #D2D2D2;
 $line-grey-dark:#8E8F90;
-$tab-background:#FFFFFF;
+$icon-border-blue: #C7DDFD;
+$button-reset-background-default: #DEA613;
+$button-reset-background-active: #FFC627;
+$button-submenu-backgroung-hover: #EBF3FF;
+$button-submenu-backgroung-active: #FFF3D3;
+$button-submit-email: #F3C34B;
+$button-results-background-default: #829A59;
+$button-results-background-active: #B5CC8D;
+$button-lever-steps-active: #949D85;
 
 @mixin full_size {
     min-height:100vh;
@@ -20,8 +33,25 @@ $tab-background:#FFFFFF;
 }
 
 //viewport width
-$viewport-width-desktop: 1280px;
+$viewport-width-desktop-max: 1920px;
+$viewport-width-desktop-min: 1280px;
+$viewport-width-tablet-max: 1279px;
+$viewport-width-tablet-min: 834px;
+$viewport-width-mobile-max: 833px;
+$viewport-width-mobile-min: 375px;
 
 //container max-width
 $input-container-max-width: 400px;
 $output-container-max-width: 804px;
+$modal-container-width--desktop: 1212px;
+$modal-container-width--tablet: 727px;
+$modal-container-width--mobile: 335px;
+
+//container height
+$header-height: 124px;
+$footer-height: 165.969px;
+$modal-container-height--tablet: 833px;
+$modal-container-height--mobile: 560px;
+
+//wrapper margin
+$wrapper-margin-x: calc(35px * 2);

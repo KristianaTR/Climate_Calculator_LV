@@ -1,0 +1,62 @@
+@import 'buttonCloseModal.scss';
+
+.modal-tablet-mask {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: table;
+    transition: opacity 0.3s ease;
+    .modal-tablet-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        .modal-tablet-block {
+            display: flex;
+            flex-direction: column;
+            max-width: $modal-container-width--tablet;
+            max-height: $modal-container-height--tablet;
+            box-sizing: border-box;            
+            margin: auto;
+            background: $background-white;
+            border-radius: 4px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            position: relative;
+            .button-close-container {
+                position: absolute;
+                top: 19px;
+                right: 19px;
+                .modal-close-icon {
+                    margin: 0;
+                }
+            }
+            .block-wrapper {
+                margin: 0;
+                display: flex;
+                height: 708px;
+                box-sizing: border-box;
+                .block-container {
+                    height: 100%;
+                    margin: 0;
+                    padding: 35px 34px 40px 34px;
+                    .view-wrapper {
+                        margin-top: 34px;
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        -ms-overflow-style: none;
+                        scrollbar-width: none;
+                        overscroll-behavior-y: contain;
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                        .content-container {
+                           padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

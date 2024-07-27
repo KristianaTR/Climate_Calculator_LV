@@ -1,0 +1,66 @@
+.project-purpose {
+    flex-direction: column;
+    .content-blocks {
+        &.project-purpose {
+            &:first-child {
+                flex-direction: row!important;
+                .content-block__text-container {
+                    p, ul {
+                        width: 80%;
+                        @media screen and (max-width:$viewport-width-tablet-max) {
+                            width: 100%;
+                            text-align: left;
+                            padding-bottom: 32px;
+                            margin: 0;
+                        }
+                        @media screen and (max-width: $viewport-width-mobile-max) {
+                            padding-bottom: 13px;
+                            margin: initial;
+                        }
+                    }
+                    ul {
+                        @media screen and (max-width:$viewport-width-mobile-max) {
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+            .content-block {
+                &__text-container {
+                    h2 {
+                        width: 85%;
+                        @media screen and (max-width:$viewport-width-tablet-max) {
+                            margin-bottom: 40px!important;
+                        }
+                        @media screen and (max-width:$viewport-width-mobile-max) {
+                            width: 100%;
+                            margin-bottom: 0;
+                        }
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
+                    img {
+                        display: none;
+                        @media screen and (max-width:$viewport-width-tablet-max) {
+                            display: block!important;
+                            float: right;
+                            padding-left: 23px;
+                            margin-bottom: 40px;
+                        }
+                        @media screen and (max-width:$viewport-width-mobile-max) {
+                            padding-left: 0;
+                        }
+                    }
+                }
+                &__img-container {
+                    margin-right: 80px;
+                    @media screen and (max-width:$viewport-width-tablet-max) {
+                        display: none;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }    
+}

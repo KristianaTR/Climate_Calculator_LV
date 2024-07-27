@@ -1,0 +1,65 @@
+@import 'buttonScroll.scss';
+
+.content-container {
+    &.calc-structure {
+        .content-blocks {
+            &:last-child {
+                .content-block {
+                    &__text-container {
+                        @media screen and (max-width:$viewport-width-tablet-max) {
+                            margin-right: 0!important;
+                            padding-left: 66px;
+                            padding-right: 66px;
+                        }
+                    }
+                }
+                @media screen and (max-width:$viewport-width-tablet-max) {
+                    flex-direction: column;
+                }
+                @media screen and (max-width:$viewport-width-mobile-max) {
+                    display: none!important;
+                }
+            }
+            .content-block {
+                &__img-container {
+                    @media screen and (max-width:$viewport-width-tablet-max) {
+                        justify-content: space-around;
+                    }
+                    img.img-desktop {
+                        @media screen and (max-width:$viewport-width-tablet-max) {
+                            display: none;
+                        }
+                    }
+                    img.img-tablet {
+                        @media screen and (max-width:$viewport-width-tablet-max) {
+                            display: flex!important;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            object-fit: contain;
+                        }
+                        @media screen and (max-width:$viewport-width-mobile-max) {
+                            display: none!important;
+                        }
+                    }
+                    img.img-mobile {
+                        @media screen and (max-width:$viewport-width-mobile-max) {
+                            display: flex!important;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            object-fit: contain;
+                        }
+                    }
+                }
+                &__text-container {
+                    &.mobile {
+                       
+                        @media screen and (max-width:$viewport-width-mobile-max) {
+                            display: flex!important;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
